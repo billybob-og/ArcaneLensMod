@@ -1,0 +1,17 @@
+{
+    "name": "The Soul Feeder",
+    "category": "arcanelens:mana",
+    "icon": "arcanelens:soul_feeder",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:soul_feeder",
+            "title": "A Second Pair",
+            "text": "Holds up to nine stacks and feeds them in one item at a time to any lit Soul Pedestal it's linked to, so it never sits idle waiting to be fed by hand."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Place it within a few blocks of a Soul Pedestal to link automatically, the same as a Lens Pedestal - no wiring required. Linked to more than one at once, it tops off whichever pedestal is free rather than favoring just one."
+        }
+    ]
+}

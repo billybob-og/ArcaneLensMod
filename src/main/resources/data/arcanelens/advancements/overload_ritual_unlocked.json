@@ -1,0 +1,26 @@
+{
+  "parent": "arcanelens:unlock_the_pact",
+  "display": {
+    "icon": {
+      "item": "arcanelens:overload_core"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.overload_ritual_unlocked.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.overload_ritual_unlocked.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "overload_ritual": {
+      "trigger": "arcanelens:skill_purchased",
+      "conditions": {
+        "skill": "OVERLOAD_RITUAL"
+      }
+    }
+  }
+}

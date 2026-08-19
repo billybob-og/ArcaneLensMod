@@ -1,0 +1,34 @@
+{
+    "name": "Arcane Assembler",
+    "category": "arcanelens:assembler",
+    "icon": "arcanelens:arcane_assembler",
+    "advancement": "arcanelens:arcane_assembler_unlocked",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:arcane_assembler",
+            "title": "A Hungry Machine",
+            "text": "Requires its own Skill Tree unlock first - the recipe stays visible even before then, but crafting it early produces nothing. It's 2 blocks wide, so clear the space beside where you place it - the second half is placed automatically. Right-click either half to open it: a fuel slot, an 8-slot ingredient buffer, a real 3x3 crafting grid, and an output slot. Hoppers work against either half too, feeding fuel and the buffer and pulling from the output slot."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Feeding It",
+            "text": "Instead of redstone, the Assembler runs on crops and meat dropped into its fuel slot - wheat, potatoes, sugar cane, raw beef, and more. One fuel item powers a stretch of crafting progress. It only ever eats fuel while a valid recipe is actually sitting in the grid - it won't burn food for nothing."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Set It and Forget It",
+            "text": "Place ingredients in the 3x3 grid like a normal crafting table - any real recipe works, not just a fixed list. Once a slot has held an item, the Assembler remembers that pattern and keeps refilling that slot on its own: first from its own buffer, then, if it doesn't find a match there, from the Living Chest cluster it happens to be touching."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Redesigning the Recipe",
+            "text": "Don't want to hand-place all 9 ingredients just to switch recipes? Right-click a grid slot while holding an item to set what belongs there without spending anything from your hand - the Assembler swaps its memory for that slot and pulls the real item in from its buffer or storage cluster on the next refill cycle. Right-click with an empty hand instead to clear a slot's memory entirely - needed for recipes like sticks, where most of the 9 slots have to stay genuinely empty, not just untouched. Auto-refill pauses the whole time the screen is open, so nothing fights you mid-edit."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Not Part of the Network",
+            "text": "The Assembler is its own separate machine - it never joins a storage network's cluster, claims nothing, and works completely fine hopper-fed with no Living Chest anywhere nearby. Building it against a cluster is purely an optional convenience for keeping its buffer topped up."
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "arcanelens:unlock_the_pact",
+  "display": {
+    "icon": {
+      "item": "arcanelens:arcane_assembler"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.self_sufficient.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.self_sufficient.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_assembler": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arcanelens:arcane_assembler"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

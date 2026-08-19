@@ -1,0 +1,13 @@
+{
+    "name": "The Faith Charm",
+    "category": "arcanelens:charms",
+    "icon": "arcanelens:faith_charm",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:faith_charm",
+            "title": "A Steady Offering",
+            "text": "Worn in a charm slot, it works like a shrine you never have to visit - a trickle of Faith arrives on its own, slowly, for as long as it stays on."
+        }
+    ]
+}

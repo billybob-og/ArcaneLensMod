@@ -1,0 +1,23 @@
+{
+  "parent": "arcanelens:hunger_points_the_way",
+  "display": {
+    "icon": {
+      "item": "minecraft:warped_fungus"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.find_warped_relic.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.find_warped_relic.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "found": {
+      "trigger": "arcanelens:sleeping_god_relic_found"
+    }
+  }
+}

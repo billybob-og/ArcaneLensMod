@@ -1,0 +1,18 @@
+{
+    "name": "The Hunger's Boon",
+    "category": "arcanelens:exploration",
+    "icon": "arcanelens:hungers_boon",
+    "advancement": "arcanelens:defeat_sleeping_god",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "A Small Favor",
+            "text": "Once the Hunger's eyes have opened upon you, its attention starts to mean something more. Every so often, as your Faith grows, it presses a Token of the Hunger into your thoughts - and with it, a choice between two gifts."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Right-Click to Accept",
+            "text": "Choose the Boon from the token's offering, and a right-click consumes it - permanently lengthening how long the good the Hunger does for you actually lasts."
+        }
+    ]
+}

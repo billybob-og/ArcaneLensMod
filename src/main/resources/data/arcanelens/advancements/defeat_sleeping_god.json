@@ -1,0 +1,28 @@
+{
+  "parent": "arcanelens:root",
+  "display": {
+    "icon": {
+      "item": "arcanelens:sleeping_god_helmet"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.defeat_sleeping_god.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.defeat_sleeping_god.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "killed_sleeping_god": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "arcanelens:sleeping_god"
+        }
+      }
+    }
+  }
+}

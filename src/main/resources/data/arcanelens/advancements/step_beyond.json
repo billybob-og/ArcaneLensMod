@@ -1,0 +1,26 @@
+{
+  "parent": "arcanelens:unlock_the_pact",
+  "display": {
+    "icon": {
+      "item": "minecraft:ender_pearl"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.step_beyond.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.step_beyond.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "pocket_dimension": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:pocket_dimension"
+      }
+    }
+  }
+}

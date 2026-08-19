@@ -1,0 +1,25 @@
+{
+    "name": "Terminal Upgrades",
+    "category": "arcanelens:storage",
+    "icon": "arcanelens:slot_upgrade",
+    "advancement": "arcanelens:storage_system_unlocked",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:stack_upgrade",
+            "title": "Compactor Upgrade",
+            "text": "Drop one into a Terminal's upgrade row and every slot in that Terminal's pool can hold 32 more of an item past its normal stack limit. Stacks with itself - up to 3 in the upgrade row at once, for up to +96 per slot."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:slot_upgrade",
+            "title": "Slot Upgrade",
+            "text": "Adds 1 extra slot to the pool per upgrade installed. Unlike a Living Chest's slots, this storage lives inside the Terminal itself - removing the upgrade later drops whatever was sitting in that slot."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Mixing Both",
+            "text": "The upgrade row holds 3 slots total, and Stack and Slot Upgrades can be mixed freely across them - there's no requirement to commit to one type."
+        }
+    ]
+}

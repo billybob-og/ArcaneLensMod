@@ -1,0 +1,26 @@
+{
+  "parent": "arcanelens:pledge_made",
+  "display": {
+    "icon": {
+      "item": "arcanelens:sun_faith_altar"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.pledge_made_sun.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.pledge_made_sun.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "pledged": {
+      "trigger": "arcanelens:pledge_made",
+      "conditions": {
+        "god": "sun"
+      }
+    }
+  }
+}

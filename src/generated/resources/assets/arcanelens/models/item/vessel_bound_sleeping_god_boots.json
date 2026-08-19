@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "arcanelens:item/vessel_bound_sleeping_god_boots"
+  }
+}

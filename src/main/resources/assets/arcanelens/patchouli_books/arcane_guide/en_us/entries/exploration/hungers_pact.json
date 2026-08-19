@@ -1,0 +1,23 @@
+{
+    "name": "The Hunger's Pact",
+    "category": "arcanelens:exploration",
+    "icon": "arcanelens:hungers_pact",
+    "advancement": "arcanelens:defeat_sleeping_god",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "Something At The Top",
+            "text": "The idol waiting at the top of the Hunger's tower isn't just for atmosphere. Speak with it - right-click - and, if you come bearing the right things, it will trade."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "The First Price",
+            "text": "Offer it 3 Tokens of the Hunger, and it accepts them without a word. That's only the opening price, though - come back empty-handed and nothing more happens yet."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "The Second Price",
+            "text": "Return later with 1 Arcane Ink, and the trade completes: something passes back the other way. The Hunger's Pact, once granted, is yours to keep - it isn't consumed, and right-clicking it opens onto something new."
+        }
+    ]
+}

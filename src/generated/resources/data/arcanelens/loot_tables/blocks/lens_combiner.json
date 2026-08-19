@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arcanelens:lens_combiner"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "arcanelens:blocks/lens_combiner"
+}

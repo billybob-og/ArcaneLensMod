@@ -1,0 +1,18 @@
+{
+    "name": "Arcane Ink",
+    "category": "arcanelens:exploration",
+    "icon": "arcanelens:arcane_ink",
+    "advancement": "arcanelens:defeat_sleeping_god",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "A Rare Currency",
+            "text": "Arcane Ink turns up seldom, and mostly as dungeon loot - a thick, faintly glowing vial of something that isn't quite ink and isn't quite blood. Whatever it actually is, the Hunger seems to want it."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "What It's For",
+            "text": "Beyond trading it away, Arcane Ink has no use of its own - it exists to be spent. If you can't find enough of it, a recipe does exist as a backup: a Nether Star, a Glass Bottle, and two Raw Arcane Material - a deliberately steep price for something meant to mostly come from dungeons instead."
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+Arcane Lens: Credits
+====================
+
+Created by Joshua.
+
+Built on Minecraft Forge, without which none of this would be possible.
+Thank you to the Forge team and community for the modding platform and
+documentation that made this mod possible.
+
+See LICENSE.txt for Forge/FML's own credits and licensing terms.

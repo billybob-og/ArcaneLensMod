@@ -1,0 +1,16 @@
+{
+    "name": "Stacking Duplicates",
+    "category": "arcanelens:spells",
+    "icon": "arcanelens:diamond_engraver",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "One Spell, Stacked",
+            "text": "Inscribing the same spell into more than one slot doesn't give you two separate entries to cycle through - it collapses into a single, stronger casting of that spell instead."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Each extra copy increases the spell's effect and slightly reduces its mana cost, up to a cap at the third copy. Spells that scale by count, like Lightning Strike's bolts or Summon Ally's wolves, gain more instances instead of raw power. This bonus follows the spell wherever it's inscribed, including onto lenses built by combining others."
+        }
+    ]
+}

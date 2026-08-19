@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "arcanelens:block/inscription_workbench_top",
+    "side": "arcanelens:block/inscription_workbench_side",
+    "top": "arcanelens:block/inscription_workbench_top"
+  }
+}

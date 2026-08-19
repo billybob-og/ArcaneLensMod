@@ -1,0 +1,29 @@
+{
+  "type": "arcanelens:broken_vessel",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "arcanelens:warped_hollow",
+      "lakes": false,
+      "features": true,
+      "layers": [
+        {
+          "block": "minecraft:bedrock",
+          "height": 1
+        },
+        {
+          "block": "minecraft:blackstone",
+          "height": 48
+        },
+        {
+          "block": "minecraft:warped_nylium",
+          "height": 1
+        }
+      ],
+      "structure_overrides": [
+        "arcanelens:vessel_hollow",
+        "minecraft:nether_fossil"
+      ]
+    }
+  }
+}

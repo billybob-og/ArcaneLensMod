@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        "arcanelens:magnet_charm",
+        "arcanelens:faith_charm",
+        "arcanelens:mana_orb_charm",
+        "arcanelens:burning_charcoal_charm",
+        "arcanelens:antivenom_charm",
+        "arcanelens:preserved_wither_rose_charm"
+    ]
+}

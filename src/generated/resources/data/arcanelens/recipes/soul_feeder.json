@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:hopper"
+    },
+    {
+      "item": "minecraft:soul_sand"
+    },
+    {
+      "item": "arcanelens:raw_arcane_material"
+    }
+  ],
+  "result": {
+    "item": "arcanelens:soul_feeder"
+  }
+}

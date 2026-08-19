@@ -1,0 +1,23 @@
+{
+  "parent": "arcanelens:defeat_sleeping_god",
+  "display": {
+    "icon": {
+      "item": "arcanelens:token_of_the_hunger"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.pledge_made.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.pledge_made.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "pledged": {
+      "trigger": "arcanelens:pledge_made"
+    }
+  }
+}

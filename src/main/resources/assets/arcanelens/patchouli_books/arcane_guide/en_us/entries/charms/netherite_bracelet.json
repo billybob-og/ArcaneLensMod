@@ -1,0 +1,13 @@
+{
+    "name": "Netherite Bracelet",
+    "category": "arcanelens:charms",
+    "icon": "arcanelens:netherite_bracelet",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:netherite_bracelet",
+            "title": "As Far As It Goes",
+            "text": "Reforged again from a Gold Bracelet - three extra charm slots while it's worn, the most any bracelet manages."
+        }
+    ]
+}

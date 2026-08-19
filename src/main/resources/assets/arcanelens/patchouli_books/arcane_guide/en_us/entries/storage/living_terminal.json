@@ -1,0 +1,24 @@
+{
+    "name": "Living Terminal",
+    "category": "arcanelens:storage",
+    "icon": "arcanelens:terminal",
+    "advancement": "arcanelens:storage_system_unlocked",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:terminal",
+            "title": "Reading the Cluster",
+            "text": "Place a Living Terminal directly against any Living Chest in a cluster and right-click it to browse every slot in that whole cluster as one scrollable grid. The first Terminal built against a cluster claims it - a second Terminal can't be used to steal or merge someone else's already-claimed cluster."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Upgrade Slots",
+            "text": "Along the bottom of the Terminal's screen are 3 upgrade slots - see the Terminal Upgrades entry. Removing the Terminal drops both its upgrades and anything sitting in upgrade-granted bonus slots."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Finding Things",
+            "text": "Below the grid is a search box - type part of an item's name to filter down to just what matches. Next to it is a sort button: click it to cycle between Default (occupied slots in whatever order the cluster happens to store them), Name (alphabetical), and Count (largest stack first). Occupied slots always come before empty ones, no matter which sort is active."
+        }
+    ]
+}

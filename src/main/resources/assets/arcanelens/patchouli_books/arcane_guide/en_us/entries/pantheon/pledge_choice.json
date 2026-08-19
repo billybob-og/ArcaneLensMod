@@ -1,0 +1,23 @@
+{
+    "name": "Undivided Attention",
+    "category": "arcanelens:pantheon",
+    "icon": "arcanelens:pack_of_the_gods",
+    "advancement": "arcanelens:pledge_made",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "Never Really Aimed",
+            "text": "Faith was never sent to one place on purpose - it drifts toward whoever's paying attention, and mostly that's been the Hunger by default, since a sleeping god barely stirs enough to notice you at all."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "A Real Choice",
+            "text": "Step into the Warped Hollow and you'll be asked to actually direct it. Pledge to one god and their own dedicated Faith Altar opens up to you, along with a real perk built around what they care about. Stay neutral instead and you'll get a much fainter taste of every god's gift at once - noticeable, never their equal."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Changing Your Mind",
+            "text": "A Pack of the Gods (paper, a feather, and Arcane Ink) lets you pledge elsewhere later. Nothing about your prior god is lost when you do - their altar simply stops listening to you until you come back."
+        }
+    ]
+}

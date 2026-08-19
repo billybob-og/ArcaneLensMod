@@ -1,0 +1,28 @@
+{
+    "name": "What the Pact Opens",
+    "category": "arcanelens:exploration",
+    "icon": "arcanelens:hungers_pact",
+    "advancement": "arcanelens:defeat_sleeping_god",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "A Standing Offer",
+            "text": "Right-click The Hunger's Pact and a small menu opens - a standing offer of permanent upgrades, each paid for with more Arcane Ink. Nothing about it is one-time; open it again whenever you've saved up more."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Mana Boost",
+            "text": "Raises the max mana of every Magic Lens you own, up to 3 levels. Buying a level applies immediately to lenses you're already carrying, and any lens crafted afterward starts with the bonus already built in."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Cooldowns & Costs",
+            "text": "Both repeat up to 5 levels each, each level shaving a further 5% off spellcasting cooldowns or mana costs respectively - up to 25% off at full investment. Later levels cost more ink than earlier ones."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Pocket Dimension",
+            "text": "A one-time spell unlock, but gated: it only becomes purchasable once Mana Boost has reached at least level 1. Buy it and the spell is simply known from then on - no book, no hunting for it."
+        }
+    ]
+}

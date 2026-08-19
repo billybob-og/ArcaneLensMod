@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "arcanelens:warped_attunement_template"
+  },
+  "base": {
+    "item": "arcanelens:sleeping_god_boots"
+  },
+  "addition": {
+    "item": "arcanelens:warped_vessel_shard"
+  },
+  "result": {
+    "item": "arcanelens:vessel_bound_sleeping_god_boots"
+  }
+}

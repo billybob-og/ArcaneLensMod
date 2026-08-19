@@ -1,0 +1,18 @@
+{
+    "name": "Storage Connector",
+    "category": "arcanelens:storage",
+    "icon": "arcanelens:storage_connector",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:storage_connector",
+            "title": "Bridging Two Clusters",
+            "text": "Two separate Living Chest clusters stay separate, even if you'd like them to act as one - unless a chain of Storage Connectors physically links them together. A Connector contributes no slots of its own; it's purely a bridge, and doesn't require the Storage System skill to craft."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Ownership Conflicts",
+            "text": "You can't bridge two clusters that already each have their own claimed Terminal - the game rejects the placement outright rather than silently merging two owners' storage together. Bridge clusters before claiming them with a Terminal, or keep unclaimed chests on one side of the connector."
+        }
+    ]
+}

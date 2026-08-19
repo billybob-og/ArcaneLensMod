@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "arcanelens:arcane_ink"
+    }
+  ],
+  "result": {
+    "item": "arcanelens:sun_faith_altar"
+  }
+}

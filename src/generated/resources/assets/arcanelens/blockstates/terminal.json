@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "arcanelens:block/terminal",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "arcanelens:block/terminal"
+    },
+    "facing=south": {
+      "model": "arcanelens:block/terminal",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "arcanelens:block/terminal",
+      "y": 270
+    }
+  }
+}

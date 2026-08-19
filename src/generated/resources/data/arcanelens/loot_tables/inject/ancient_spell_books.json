@@ -1,0 +1,172 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:fireball\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:heal\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:frost_bolt\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:blink\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:lightning_strike\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:chain_lightning\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:meteor_shower\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:poison_bolt\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:life_drain\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:arcane_shield\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:haste_surge\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:gravity_pull\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:shockwave\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:summon_ally\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:arrow_volley\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SpellId:\"arcanelens:invisibility\"}"
+            }
+          ],
+          "name": "arcanelens:ancient_spell_book"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "arcanelens:inject/ancient_spell_books"
+}

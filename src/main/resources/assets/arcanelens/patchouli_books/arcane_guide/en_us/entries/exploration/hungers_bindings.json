@@ -1,0 +1,23 @@
+{
+    "name": "The Hunger's Bindings",
+    "category": "arcanelens:exploration",
+    "icon": "arcanelens:hungers_bindings",
+    "advancement": "arcanelens:defeat_sleeping_god",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "The Other Gift",
+            "text": "Choose the Bindings instead from a Token of the Hunger's offering, and it works differently from its counterpart - this one isn't meant to be held onto, but released."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Set It Loose",
+            "text": "Simply burn it - any fire will do, wherever you happen to be. No altar, no soul fire required. These were never yours to wear - they're what still holds the Hunger back, however small a piece you're given to carry. Burn one, and you loosen that grip by a fraction; what the Hunger does to you eases right along with it."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Past the Breaking Point",
+            "text": "Loosen its hold enough, and the Hunger simply stops turning against you at all - past that point, releasing still more doesn't go to waste. Freer, it starts lingering instead, every so often granting a little more than it meant to."
+        }
+    ]
+}

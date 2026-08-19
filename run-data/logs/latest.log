@@ -1,0 +1,36 @@
+[19Aug2026 08:33:48.845] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\alfon\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.20, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, arcanelens, --all, --output, C:\Users\alfon\Dev\ArcaneLensMod\src\generated\resources, --existing, C:\Users\alfon\Dev\ArcaneLensMod\src\main\resources]
+[19Aug2026 08:33:48.864] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.19 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[19Aug2026 08:33:49.046] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[19Aug2026 08:33:49.126] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/alfon/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[19Aug2026 08:33:49.575] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alfon\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.20\c354b21002937b393c4f86163a98dccdf1d51e72\javafmllanguage-1.20.1-47.4.20.jar is missing mods.toml file
+[19Aug2026 08:33:49.580] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alfon\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.20\865d75f8c18329ddb31db5856701ab86609108b5\lowcodelanguage-1.20.1-47.4.20.jar is missing mods.toml file
+[19Aug2026 08:33:49.584] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alfon\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.20\af599930362212ae937e392709f49047e6abbbf\mclanguage-1.20.1-47.4.20.jar is missing mods.toml file
+[19Aug2026 08:33:49.590] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alfon\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.20\e8cc697c69f3911e76caa2f005d9486597cd7448\fmlcore-1.20.1-47.4.20.jar is missing mods.toml file
+[19Aug2026 08:33:49.716] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[19Aug2026 08:33:51.757] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[19Aug2026 08:33:51.765] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\alfon\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, arcanelens, --all, --output, C:\Users\alfon\Dev\ArcaneLensMod\src\generated\resources, --existing, C:\Users\alfon\Dev\ArcaneLensMod\src\main\resources]
+[19Aug2026 08:33:52.161] [main/INFO] [mixin/]: Remapping refMap curios.refmap.json using C:\Users\alfon\Dev\ArcaneLensMod/build/createSrgToMcp/output.srg
+[19Aug2026 08:33:52.164] [main/INFO] [mixin/]: Remapping refMap patchouli.refmap.json using C:\Users\alfon\Dev\ArcaneLensMod/build/createSrgToMcp/output.srg
+[19Aug2026 08:33:52.902] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [arcanelens]
+[19Aug2026 08:33:58.485] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.20, for MC 1.20.1 with MCP 20230612.114412
+[19Aug2026 08:33:58.486] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.20 Initialized
+[19Aug2026 08:33:59.344] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/alfon/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.20_mapped_official_1.20.1/forge-1.20.1-47.4.20_mapped_official_1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[19Aug2026 08:33:59.345] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/alfon/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.20_mapped_official_1.20.1/forge-1.20.1-47.4.20_mapped_official_1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[19Aug2026 08:33:59.610] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_us
+[19Aug2026 08:33:59.632] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_us finished after 21 ms
+[19Aug2026 08:33:59.632] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[19Aug2026 08:33:59.733] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 100 ms
+[19Aug2026 08:33:59.734] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: arcanelens
+[19Aug2026 08:33:59.755] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: arcanelens finished after 21 ms
+[19Aug2026 08:33:59.755] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: arcanelens
+[19Aug2026 08:33:59.959] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: arcanelens finished after 203 ms
+[19Aug2026 08:33:59.959] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id arcanelens
+[19Aug2026 08:33:59.974] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id arcanelens finished after 14 ms
+[19Aug2026 08:33:59.975] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id arcanelens
+[19Aug2026 08:33:59.977] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id arcanelens finished after 2 ms
+[19Aug2026 08:33:59.978] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[19Aug2026 08:34:00.087] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 109 ms
+[19Aug2026 08:34:00.088] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[19Aug2026 08:34:00.110] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 21 ms
+[19Aug2026 08:34:00.110] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 500 ms
+[19Aug2026 08:34:00.132] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 218, old count: 218, new count: 219, removed stale: 0, written: 0

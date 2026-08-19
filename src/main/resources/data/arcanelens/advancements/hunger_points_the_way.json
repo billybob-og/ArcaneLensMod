@@ -1,0 +1,23 @@
+{
+  "parent": "arcanelens:defeat_sleeping_god",
+  "display": {
+    "icon": {
+      "item": "arcanelens:token_of_the_hunger"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.hunger_points_the_way.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.hunger_points_the_way.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "told": {
+      "trigger": "arcanelens:hunger_points_the_way"
+    }
+  }
+}

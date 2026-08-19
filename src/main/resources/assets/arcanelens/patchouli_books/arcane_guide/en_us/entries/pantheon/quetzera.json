@@ -1,0 +1,18 @@
+{
+    "name": "Quetzera, Coiled in Light",
+    "category": "arcanelens:pantheon",
+    "icon": "arcanelens:sun_faith_altar",
+    "advancement": "arcanelens:pledge_made_sun",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "Asks Only for Daylight",
+            "text": "Quetzera's Faith Altar wants nothing fed to it and nothing killed near it - it simply reads its own light level, sun or torchlight alike, and earns Faith from however bright the sky above it happens to be."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Warmed, and Left Cold",
+            "text": "Pledged to him, daylight brings Night Vision, a faint glow, quickened hands and feet, and armor that thickens the longer you've kept faith. Night takes all of it back and adds its own toll - slowness, hunger, and weakness settle in the moment the sun goes down, same as any snake losing its warmth after dark."
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "arcanelens:raw_arcane_material"
+    },
+    "C": {
+      "item": "minecraft:chain"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "OCO",
+    "CAC",
+    "OCO"
+  ],
+  "result": {
+    "item": "arcanelens:overload_core"
+  },
+  "show_notification": true
+}

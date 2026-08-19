@@ -1,0 +1,13 @@
+{
+    "name": "A Weird Amulet",
+    "category": "arcanelens:exploration",
+    "icon": "arcanelens:weird_amulet",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:weird_amulet",
+            "title": "A Private Reading",
+            "text": "Right-click to hold it and it answers with exactly one thing: how much Faith you carry right now. The reading is yours alone - nobody else nearby sees it."
+        }
+    ]
+}

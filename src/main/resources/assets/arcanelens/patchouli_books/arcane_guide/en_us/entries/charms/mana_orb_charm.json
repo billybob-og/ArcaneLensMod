@@ -1,0 +1,13 @@
+{
+    "name": "The Mana Orb Charm",
+    "category": "arcanelens:charms",
+    "icon": "arcanelens:mana_orb_charm",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:mana_orb_charm",
+            "title": "A Pedestal You Wear",
+            "text": "Worn in a charm slot, it slowly charges any Magic Lens carried in your inventory - no Soul Pedestal, no Lens Pedestal, just time."
+        }
+    ]
+}

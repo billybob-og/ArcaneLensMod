@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1234567,
+    "separation": 10,
+    "spacing": 24
+  },
+  "structures": [
+    {
+      "structure": "arcanelens:castle_dungeon",
+      "weight": 1
+    }
+  ]
+}

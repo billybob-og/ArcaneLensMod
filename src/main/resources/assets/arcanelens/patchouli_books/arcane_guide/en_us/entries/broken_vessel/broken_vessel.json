@@ -1,0 +1,23 @@
+{
+    "name": "Broken Vessel",
+    "category": "arcanelens:broken_vessel",
+    "icon": "arcanelens:warped_vessel_shard",
+    "advancement": "arcanelens:defeat_broken_vessel",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "A Cracked Thing, Worn",
+            "text": "What you fought wasn't ever really alive - a mask, or a vessel, cracked long before you got there. What moved it, what struck at you, was the warped fungus that had grown through and around it, using the vessel the way a hand uses a glove. Most of what you saw was fungus. The mask was only ever a third of it."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Vessel and Fungus",
+            "text": "Its fight had a shape, if you were paying attention - slow and deliberate while the vessel still led, then faster and more spore-driven as the fungus took over. Whatever you're wearing now that dropped from it, it isn't new material - it's your existing gear, with a piece of that vessel worked into it."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "It Won't Stay Down",
+            "text": "The lair it kept doesn't unmake itself when it falls, and neither does the thing that lived there. Bring back what its shards are good for, and you can call it again - on your own terms this time, whenever there's more to gather."
+        }
+    ]
+}

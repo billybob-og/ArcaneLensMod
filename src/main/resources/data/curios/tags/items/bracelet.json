@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+        "arcanelens:iron_bracelet",
+        "arcanelens:gold_bracelet",
+        "arcanelens:netherite_bracelet"
+    ]
+}

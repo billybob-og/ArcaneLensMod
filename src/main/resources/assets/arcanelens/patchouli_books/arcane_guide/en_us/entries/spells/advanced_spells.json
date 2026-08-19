@@ -1,0 +1,32 @@
+{
+    "name": "Advanced Spells",
+    "category": "arcanelens:spells",
+    "icon": "minecraft:nether_star",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "Offense",
+            "text": "Chain Lightning arcs between nearby enemies, weakening with each jump. Meteor Shower calls down repeated fiery strikes on the same spot over a few seconds, rather than landing all at once. Poison Bolt and Life Drain strike a single target - the latter healing you for a portion of the damage dealt."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Support & Control",
+            "text": "Arcane Shield grants temporary Absorption, and Haste Surge speeds up your movement and mining. Gravity Pull yanks nearby foes toward you, while Shockwave throws them away from you instead."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Summon Ally",
+            "text": "Calls one or more temporary wolves to your side, already loyal and ready to defend you. They fade away on their own once their time is up."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Arrow Volley",
+            "text": "Doesn't fire anything on its own - instead, it enchants your very next shot from a bow, splitting it into a ring of extra arrows the moment it leaves the string. Extra copies add more arrows to the volley, up to a cap."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Invisibility",
+            "text": "Turns you invisible for a short time, letting you slip past danger or line up a shot unseen. Extra copies extend how long it lasts."
+        }
+    ]
+}

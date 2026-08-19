@@ -1,0 +1,28 @@
+{
+  "parent": "arcanelens:combine_lenses",
+  "display": {
+    "icon": {
+      "item": "arcanelens:arcane_ore"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.fill_25_slots.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.fill_25_slots.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "slots_filled": {
+      "trigger": "arcanelens:lens_slots_filled",
+      "conditions": {
+        "count": {
+          "min": 25
+        }
+      }
+    }
+  }
+}

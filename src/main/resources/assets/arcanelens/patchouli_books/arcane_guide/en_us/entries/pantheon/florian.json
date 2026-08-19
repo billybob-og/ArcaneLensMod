@@ -1,0 +1,18 @@
+{
+    "name": "Florian, What Grows",
+    "category": "arcanelens:pantheon",
+    "icon": "arcanelens:fertility_faith_altar",
+    "advancement": "arcanelens:pledge_made_fertility",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "No Grand Gestures",
+            "text": "Florian's Faith Altar doesn't need feeding or sacrifice - leave it standing somewhere green and it counts what's rooted and blooming nearby on its own, on a slow, steady interval. The lusher the ground around it, the more it earns you."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Given Freely",
+            "text": "Pledged to him, your own body starts keeping pace with what you've earned since - extra hearts, growing in slowly rather than all at once, capped at ten full rows past where you started. Reach that cap and simply standing near anything green starts mending you besides."
+        }
+    ]
+}

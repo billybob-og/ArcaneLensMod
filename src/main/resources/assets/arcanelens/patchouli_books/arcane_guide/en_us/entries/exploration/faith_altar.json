@@ -1,0 +1,16 @@
+{
+    "name": "The Faith Altar",
+    "category": "arcanelens:exploration",
+    "icon": "arcanelens:faith_altar",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "Fed With Soul Fire",
+            "text": "Scattered across the land are small shrines built around a strange altar. Toss an item into soul fire within its reach and the altar consumes it, converting it into Faith - rarer items are worth more."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "The altar keeps count of what's burned through it. Feeding it stack after stack of the same cheap item quickly stops being worth the trip - its yield falls off sharply the more of one thing it's seen. What Faith is actually good for is a question for another entry."
+        }
+    ]
+}

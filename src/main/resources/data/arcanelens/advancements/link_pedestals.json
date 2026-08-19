@@ -1,0 +1,23 @@
+{
+  "parent": "arcanelens:root",
+  "display": {
+    "icon": {
+      "item": "arcanelens:soul_pedestal"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.link_pedestals.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.link_pedestals.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "linked": {
+      "trigger": "arcanelens:pedestals_linked"
+    }
+  }
+}

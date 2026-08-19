@@ -1,0 +1,23 @@
+{
+  "parent": "arcanelens:make_a_lens",
+  "display": {
+    "icon": {
+      "item": "arcanelens:lens_combiner"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.combine_lenses.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.combine_lenses.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "combined": {
+      "trigger": "arcanelens:lenses_combined"
+    }
+  }
+}

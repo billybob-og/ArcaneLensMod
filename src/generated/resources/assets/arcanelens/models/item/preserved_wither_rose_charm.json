@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "arcanelens:item/preserved_wither_rose_charm"
+  }
+}

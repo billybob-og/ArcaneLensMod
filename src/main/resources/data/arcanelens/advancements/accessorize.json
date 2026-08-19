@@ -1,0 +1,40 @@
+{
+  "parent": "arcanelens:root",
+  "display": {
+    "icon": {
+      "item": "arcanelens:magnet_charm"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.accessorize.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.accessorize.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_accessory": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arcanelens:magnet_charm",
+              "arcanelens:faith_charm",
+              "arcanelens:mana_orb_charm",
+              "arcanelens:burning_charcoal_charm",
+              "arcanelens:antivenom_charm",
+              "arcanelens:preserved_wither_rose_charm",
+              "arcanelens:iron_bracelet",
+              "arcanelens:gold_bracelet",
+              "arcanelens:netherite_bracelet"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

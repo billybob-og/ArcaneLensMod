@@ -1,0 +1,17 @@
+{
+    "name": "The Risen Tower",
+    "category": "arcanelens:exploration",
+    "icon": "minecraft:ender_eye",
+    "advancement": "arcanelens:defeat_sleeping_god",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "Risen Overnight",
+            "text": "Those watched closely enough by the Hunger eventually find it has left something behind - a tower standing at the heart of the land, tall enough to see the world from, that was not there before."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "What waits at the top is still unclear. Perhaps it is simply a place to be seen from - or perhaps the Hunger built it for a reason of its own."
+        }
+    ]
+}

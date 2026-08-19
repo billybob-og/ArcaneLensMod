@@ -1,0 +1,28 @@
+{
+    "name": "Janus, Every Mask at Once",
+    "category": "arcanelens:pantheon",
+    "icon": "arcanelens:theater_helmet",
+    "advancement": "arcanelens:pledge_made_theater",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "Two Faces, and a Third",
+            "text": "Wherever Janus is carved or painted, it's always the same three faces: one laughing, one weeping, and between them a third - blank-eyed, sharp-nosed, and older than the other two. They aren't three moods worn by one god. Whoever wears that mask hosts three separate minds at once, each entirely its own, sharing nothing between them but the single name they're worshipped under."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "The Altar Watches Everyone",
+            "text": "Janus's Faith Altar earns Faith from performance in every sense it can find nearby: a sneak attack or a hit landed on something that wasn't watching you, a player in disguise or invisible, someone fighting on at desperately low health, even a jukebox playing to whoever's listening. Present it with a Written Book directly and it rewards the show more, the bigger the audience around you."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "The Mask of Janus",
+            "text": "Pledged to them, the mask itself becomes real armor of a kind: falls never hurt you, blows sometimes simply miss, and hostile eyes nearby occasionally lose track of you entirely. Stand far enough from anyone and your name stops showing above your head at all. None of it works while you're wearing anything else on your head - the mask takes the whole slot, flight included."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Three Tricks, Empty-Handed",
+            "text": "With nothing in your main hand, a plain right-click sends a decoy of yourself onto the stage to pull attention off you. Sneak and right-click instead to startle everything hostile nearby into backing off. Hold sneak a moment longer without attacking and you'll slip out of sight entirely, until you either run out the clock or throw the first punch. Each costs Faith to call on."
+        }
+    ]
+}

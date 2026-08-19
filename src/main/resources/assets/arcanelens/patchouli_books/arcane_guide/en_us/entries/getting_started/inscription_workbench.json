@@ -1,0 +1,17 @@
+{
+    "name": "Inscription Workbench",
+    "category": "arcanelens:getting_started",
+    "icon": "arcanelens:inscription_workbench",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:inscription_workbench",
+            "title": "Assigning Spells",
+            "text": "Place a Magic Lens and a Diamond Engraver in the workbench. Pick a slot, then choose one of your known spells to inscribe into it. Each use of the engraver wears it down by one use."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "You can only inscribe spells you already know. Spells are learned permanently from Ancient Spell Books - see the Spells category for more."
+        }
+    ]
+}

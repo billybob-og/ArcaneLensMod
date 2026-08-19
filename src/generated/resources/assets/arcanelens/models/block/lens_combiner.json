@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "arcanelens:block/lens_combiner_bottom",
+    "side": "arcanelens:block/lens_combiner_side",
+    "top": "arcanelens:block/lens_combiner_top"
+  }
+}

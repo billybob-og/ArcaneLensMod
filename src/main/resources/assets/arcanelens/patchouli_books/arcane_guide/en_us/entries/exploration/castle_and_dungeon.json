@@ -1,0 +1,21 @@
+{
+    "name": "A Forgotten Order",
+    "category": "arcanelens:exploration",
+    "icon": "minecraft:map",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "A Library on the Surface",
+            "text": "Travelers speak of a lone library standing above ground, its foundations hiding a stair down into darkness. Whoever built it left more than books behind."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Beneath the library winds a chain of chambers, tunnels, and treasure rooms. Those who explore deep enough are said to find chests holding Ancient Spell Books - and worse things guarding them. Bring a light, and bring friends."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Something Sleeps Below",
+            "text": "Rarest of all is a pitfall leading to a vast, sunken chamber - and the thing that still dreams at the bottom of it. Waking it is not recommended for the unprepared."
+        }
+    ]
+}

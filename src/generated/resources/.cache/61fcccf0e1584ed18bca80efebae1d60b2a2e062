@@ -1,0 +1,4 @@
+// 1.20.1	2026-08-09T10:37:00.1374598	Tags for minecraft:block mod id arcanelens
+2f413002200ce624a8852ae8db12d06055e3632a data/minecraft/tags/blocks/mineable/axe.json
+05e5482abbe2d2f7edec7cfb65eaeb77864277e7 data/minecraft/tags/blocks/mineable/pickaxe.json
+d52d3368d6498d39894de99a9f0d4d7f837a3299 data/minecraft/tags/blocks/needs_diamond_tool.json

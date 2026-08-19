@@ -1,0 +1,16 @@
+{
+    "name": "Learning Spells",
+    "category": "arcanelens:spells",
+    "icon": "arcanelens:ancient_spell_book",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "Ancient Spell Books",
+            "text": "Ancient Spell Books teach a spell permanently the first time they're read, and are consumed in the process. Once known, a spell can be inscribed into any Magic Lens at the Inscription Workbench."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Found a spell you already know? Reading a duplicate book recycles it into raw arcane material instead of doing nothing - a small consolation for a book you didn't need."
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:white_dye"
+    },
+    {
+      "item": "minecraft:black_dye"
+    },
+    {
+      "item": "arcanelens:arcane_ink"
+    }
+  ],
+  "result": {
+    "item": "arcanelens:theater_faith_altar"
+  }
+}

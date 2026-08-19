@@ -1,0 +1,33 @@
+{
+    "name": "What Slept, Named",
+    "category": "arcanelens:broken_vessel",
+    "icon": "minecraft:warped_fungus",
+    "advancement": "arcanelens:find_warped_relic",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "Two Growths, One Root",
+            "text": "Whatever carried the Vessel before the fungus took it stays exactly as unnamed as it always was - digging this deep changes nothing about that. But the growth itself remembers further back than either of the things it wore. It found the sleeping god long before it ever found its way into anything down here."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "A Name For The Growth",
+            "text": "It doesn't have a mouth, or a will anyone's found evidence of - just a direction it keeps growing in. It got into the god who sleeps quietly enough that his own armor grew from it instead of killing him. It got into whatever the Vessel used to be far more completely. Different hosts, same growth. It doesn't seem to care which. Those who've written about it at all just call it the Warping."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "What Slept, Named",
+            "text": "Old enough writing survives here to put a title to what you woke: God of Sleep. Not a name he offered you himself, in the only conversation you ever had with him."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "What Overloading Actually Opened",
+            "text": "The boxes were never big enough to hold what you gave them - not on their own. Every one you added didn't add room so much as deepen a reach into somewhere that could. Enough boxes, enough reach, and the place on the other end stops being just where your things went. It starts being somewhere you can follow them into."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Hunger, Named Plainly",
+            "text": "Old writing gives the thing that's been watching you a name too, though not a tidy one: a god of Hunger, in every sense the word can carry - want, greed, gluttony, the ache of never quite having enough. It never bothered introducing itself that plainly. It prefers to just take."
+        }
+    ]
+}

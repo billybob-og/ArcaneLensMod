@@ -1,0 +1,13 @@
+{
+    "name": "The Gold Bracelet",
+    "category": "arcanelens:charms",
+    "icon": "arcanelens:gold_bracelet",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:gold_bracelet",
+            "title": "Built On the Iron",
+            "text": "Reforged from an Iron Bracelet rather than built from scratch - two extra charm slots while it's worn, one better than iron managed alone."
+        }
+    ]
+}

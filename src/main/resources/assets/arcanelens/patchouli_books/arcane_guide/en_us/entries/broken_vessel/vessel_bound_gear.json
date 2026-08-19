@@ -1,0 +1,39 @@
+{
+    "name": "What the Shards Are Good For",
+    "category": "arcanelens:broken_vessel",
+    "icon": "arcanelens:warped_attunement_template",
+    "advancement": "arcanelens:defeat_broken_vessel",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "Two Ways to Spend Them",
+            "text": "Broken Vessel's drops don't have one obvious use - a Warped Attunement Template and enough Warped Vessel Shards buy either an upgrade to gear you already earned, or a way to reach your storage from anywhere. Keep fighting it and you can eventually afford both."
+        },
+        {
+            "type": "patchouli:smithing",
+            "recipe": "arcanelens:vessel_bound_sleeping_god_helmet",
+            "recipe2": "arcanelens:vessel_bound_sleeping_god_chestplate",
+            "title": "Vessel-Bound, Not Warped Twice",
+            "text": "The Minor God's armor was already warped fungus - this doesn't change that, it works a piece of the vessel itself into gear that's already yours. Same smithing table flow as any other upgrade: the original piece is consumed, enchantments carry over."
+        },
+        {
+            "type": "patchouli:smithing",
+            "recipe": "arcanelens:vessel_bound_sleeping_god_leggings",
+            "recipe2": "arcanelens:vessel_bound_sleeping_god_boots",
+            "title": "The Rest of the Set",
+            "text": "A full Vessel-Bound set keeps the original's flight, but the budget recovers slowly on its own while grounded instead of locking out after a hard cooldown. Wearing the complete set also shrugs off Poison and Wither outright - what consumed the vessel doesn't get a grip on you."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:warped_anchor",
+            "title": "The Warped Anchor",
+            "text": "Gated behind Warped Attunement in the Skill Tree, same as the reduced ritual threshold. Right-click a placed Living Terminal to bind an Anchor to it, then right-click in open air from anywhere to open that Terminal's storage remotely. Shift-right-click in open air to unbind."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:vessel_summoning_charm",
+            "title": "Calling It Back",
+            "text": "Think of the Charm less as a key and more as a seed - inert on its own, until it finds its soil. Carry it into the lair, and once it takes root there it grows back into the vessel, fungus and all. Won't take anywhere else, and won't take twice while the last growth is still standing."
+        }
+    ]
+}

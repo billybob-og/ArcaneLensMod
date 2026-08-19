@@ -1,0 +1,13 @@
+{
+    "name": "A Question of Faith",
+    "category": "arcanelens:exploration",
+    "icon": "minecraft:soul_campfire",
+    "advancement": "arcanelens:defeat_sleeping_god",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "What Comes After",
+            "text": "Waking a sleeping god and putting it back down again does not go unnoticed. Something has taken an interest in you - whether that proves a blessing or a burden remains to be seen."
+        }
+    ]
+}

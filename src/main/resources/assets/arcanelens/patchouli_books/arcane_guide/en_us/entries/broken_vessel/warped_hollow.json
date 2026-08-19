@@ -1,0 +1,23 @@
+{
+    "name": "The Warped Hollow",
+    "category": "arcanelens:broken_vessel",
+    "icon": "minecraft:warped_nylium",
+    "advancement": "arcanelens:overload_ritual_unlocked",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "Somewhere Else",
+            "text": "The place an Overload Ritual opens onto isn't a pocket of your own making - it's shared, the same way the Nether is shared, not a private room like the one your Pact can open. Anyone's ritual leads into the same hollow, just by a different door."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "A Held Breath",
+            "text": "The ground here doesn't rise and fall like the surface does - it's flat, deliberate, and quiet in a way that feels less like a landscape and more like something built and then abandoned. Ruined chambers are scattered throughout, spaced far enough apart that finding the next one takes real walking."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Something Waits",
+            "text": "You won't be walking long before you find what the network's overload was really reaching toward. It doesn't seem to have moved in a very long time. That's about to change."
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "arcanelens:block/sleeping_god_relic_altar"
+  }
+}

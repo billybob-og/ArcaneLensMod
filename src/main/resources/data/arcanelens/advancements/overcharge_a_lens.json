@@ -1,0 +1,23 @@
+{
+  "parent": "arcanelens:make_a_lens",
+  "display": {
+    "icon": {
+      "item": "arcanelens:lens_pedestal"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.overcharge_a_lens.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.overcharge_a_lens.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "mana_maxed": {
+      "trigger": "arcanelens:lens_mana_maxed"
+    }
+  }
+}

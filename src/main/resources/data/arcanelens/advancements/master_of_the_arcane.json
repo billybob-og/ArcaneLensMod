@@ -1,0 +1,116 @@
+{
+  "parent": "arcanelens:learn_all_spells",
+  "display": {
+    "icon": {
+      "item": "minecraft:nether_star"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.master_of_the_arcane.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.master_of_the_arcane.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "fireball": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:fireball"
+      }
+    },
+    "heal": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:heal"
+      }
+    },
+    "frost_bolt": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:frost_bolt"
+      }
+    },
+    "blink": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:blink"
+      }
+    },
+    "lightning_strike": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:lightning_strike"
+      }
+    },
+    "chain_lightning": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:chain_lightning"
+      }
+    },
+    "meteor_shower": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:meteor_shower"
+      }
+    },
+    "poison_bolt": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:poison_bolt"
+      }
+    },
+    "life_drain": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:life_drain"
+      }
+    },
+    "arcane_shield": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:arcane_shield"
+      }
+    },
+    "haste_surge": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:haste_surge"
+      }
+    },
+    "gravity_pull": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:gravity_pull"
+      }
+    },
+    "shockwave": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:shockwave"
+      }
+    },
+    "summon_ally": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:summon_ally"
+      }
+    },
+    "arrow_volley": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:arrow_volley"
+      }
+    },
+    "invisibility": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:invisibility"
+      }
+    }
+  }
+}

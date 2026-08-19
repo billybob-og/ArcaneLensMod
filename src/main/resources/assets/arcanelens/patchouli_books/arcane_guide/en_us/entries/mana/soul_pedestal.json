@@ -1,0 +1,21 @@
+{
+    "name": "The Soul Pedestal",
+    "category": "arcanelens:mana",
+    "icon": "arcanelens:soul_pedestal",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:soul_pedestal",
+            "title": "Banking Soul Fire",
+            "text": "Right-click the pedestal with soul sand to bank fuel, up to 3 at a time. Light it with flint and steel once it holds at least one."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "While lit, right-click an item into the pedestal to convert it into mana. The amount generated depends on the item's rarity - common items yield little, rare and epic items yield much more. Every so often the pedestal burns through one banked soul sand; banking all three lets it run three times as long between refills."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "A lit pedestal periodically rescans nearby chunks for Lens Pedestals and sends the full mana output to every one it finds linked - multiple linked pedestals is an intentional multiplier, not a split."
+        }
+    ]
+}

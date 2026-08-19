@@ -1,0 +1,26 @@
+{
+  "parent": "arcanelens:unlock_the_pact",
+  "display": {
+    "icon": {
+      "item": "arcanelens:arcane_assembler"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.arcane_assembler_unlocked.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.arcane_assembler_unlocked.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "arcane_assembler": {
+      "trigger": "arcanelens:skill_purchased",
+      "conditions": {
+        "skill": "ARCANE_ASSEMBLER"
+      }
+    }
+  }
+}

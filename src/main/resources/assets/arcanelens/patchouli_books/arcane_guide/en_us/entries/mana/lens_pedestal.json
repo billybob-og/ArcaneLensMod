@@ -1,0 +1,17 @@
+{
+    "name": "The Lens Pedestal",
+    "category": "arcanelens:mana",
+    "icon": "arcanelens:lens_pedestal",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:lens_pedestal",
+            "title": "Charging a Lens",
+            "text": "Right-click a Magic Lens onto the pedestal to place it. Any mana arriving from a linked Soul Pedestal is drained into the held lens, up to its maximum capacity."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Place a Lens Pedestal within a few blocks of a Soul Pedestal to link them automatically - no wiring required. Right-click the pedestal with an empty hand to take the lens back out."
+        }
+    ]
+}

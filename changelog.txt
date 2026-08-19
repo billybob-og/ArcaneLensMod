@@ -1,0 +1,22 @@
+Arcane Lens Changelog
+=====================
+
+0.1.0
+-----
+Initial release.
+- Magic Lens item with 5 configurable spell slots, cast via scroll-wheel
+  selection and a dedicated keybind.
+- Inscription Workbench for assigning known spells to a lens.
+- Soul Pedestal + Lens Pedestal mana system.
+- 5 starter spells: Fireball, Heal, Frost Bolt, Blink, Lightning Strike.
+- Ancient Spell Books teach spells permanently; known spells persist
+  through death.
+- Duplicate-spell buffing: assigning the same spell to multiple slots (or
+  accumulating it through merges) buffs its effect and reduces its cost
+  instead of listing it twice.
+- Arcane Ore + Lens Combiner: combine two lenses, accumulating locked
+  spells and scaling mana capacity, up to 5 combines per lens lineage.
+- Surface library structure connected via jigsaw to an underground
+  dungeon (2-12 rooms) with loot chests.
+- 8 advancements tracking pedestal linking, lens crafting, maxing out a
+  lens's slots/mana, combining lenses, and learning all starter spells.

@@ -1,0 +1,18 @@
+{
+    "name": "Eyes in the Sky",
+    "category": "arcanelens:exploration",
+    "icon": "arcanelens:sun_and_moon_ward",
+    "advancement": "arcanelens:defeat_sleeping_god",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "A Changed Face",
+            "text": "Be watched long enough by the Hunger and the sun and moon themselves stop looking quite so ordinary - a knowing, watching face settles into them. It's a one-way change; once it's happened, it doesn't undo itself, no matter what Faith does afterward."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Looking Away",
+            "text": "The Sun and Moon Ward can't stop it from happening, but right-click to hold it and the sky settles back into its familiar shape - purely cosmetic, fully reversible, and undone again with another right-click whenever you'd rather see the truth of it."
+        }
+    ]
+}

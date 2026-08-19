@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "arcanelens:warped_attunement_template"
+    },
+    {
+      "item": "arcanelens:warped_vessel_shard"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "arcanelens:warped_attunement_template"
+  }
+}

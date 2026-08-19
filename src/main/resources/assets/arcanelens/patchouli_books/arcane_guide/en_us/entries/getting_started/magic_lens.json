@@ -1,0 +1,21 @@
+{
+    "name": "The Magic Lens",
+    "category": "arcanelens:getting_started",
+    "icon": "arcanelens:magic_lens",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "An Inscribable Focus",
+            "text": "The Magic Lens is the heart of your arcane practice. It can hold up to 5 spells, which you assign at an Inscription Workbench. Once inscribed, hold the lens and scroll to cycle between your known spells."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:magic_lens",
+            "text": "A simple lens, ready to be inscribed with power."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Bind a keybind to Cast Spell in your controls menu. Scroll while holding the lens to select a spell, then press your cast key to unleash it. Casting costs mana, drawn from the lens's own reserve."
+        }
+    ]
+}

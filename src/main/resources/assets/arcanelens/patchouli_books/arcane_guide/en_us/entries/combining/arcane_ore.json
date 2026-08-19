@@ -1,0 +1,13 @@
+{
+    "name": "Arcane Ore",
+    "category": "arcanelens:combining",
+    "icon": "arcanelens:arcane_ore",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "arcanelens:arcane_ore",
+            "title": "A Diamond-Tier Vein",
+            "text": "Arcane Ore only yields its raw material to a diamond or netherite pickaxe - anything weaker just bounces off. Mine it for Raw Arcane Material, the currency the Lens Combiner demands."
+        }
+    ]
+}

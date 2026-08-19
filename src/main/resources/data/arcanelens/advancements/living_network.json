@@ -1,0 +1,32 @@
+{
+  "parent": "arcanelens:unlock_the_pact",
+  "display": {
+    "icon": {
+      "item": "arcanelens:terminal"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.living_network.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.living_network.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_terminal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arcanelens:terminal"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "The Antivenom Charm",
+    "category": "arcanelens:charms",
+    "icon": "arcanelens:antivenom_charm",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:antivenom_charm",
+            "title": "Nothing Takes Root",
+            "text": "Worn in a charm slot, Poison never gets the chance to settle in - it's gone again almost as soon as it lands."
+        }
+    ]
+}

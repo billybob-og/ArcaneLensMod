@@ -1,0 +1,30 @@
+{
+    "name": "The Overload Ritual",
+    "category": "arcanelens:broken_vessel",
+    "icon": "arcanelens:overload_core",
+    "advancement": "arcanelens:overload_ritual_unlocked",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:overload_core",
+            "title": "A Deliberate Strain",
+            "text": "Requires its own Skill Tree unlock first - the recipe stays visible even before then, but crafting it early produces nothing. Place the Overload Core directly against a Living Chest, the same rule that governs a Living Terminal."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:warped_catalyst",
+            "title": "The Catalyst",
+            "text": "A Warped Catalyst bridges both of the mod's endgame currencies - Arcane Ink and a Token of the Hunger, alongside a handful of Warped Fungus. You can't craft one without having already earned the Hunger's attention."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Pushing Past the Limit",
+            "text": "Right-click the Core with a Catalyst in hand while the network it's touching sits at its full storage capacity. If it isn't full yet, nothing happens - the Core will tell you how close you are. Once the ritual starts, it runs to completion even if the network drops below capacity partway through - there's no taking it back."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "What Opens",
+            "text": "A short, escalating charge-up ends with a small rift tearing open where the Core stood, and a matching one somewhere in a place that has no other doors in. Step through either side to cross; step through again to come back. Any number of separate rituals can be run - each one opens its own private pair into the same shared place beyond."
+        }
+    ]
+}

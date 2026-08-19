@@ -1,0 +1,32 @@
+{
+  "parent": "arcanelens:root",
+  "display": {
+    "icon": {
+      "item": "arcanelens:magic_lens"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.make_a_lens.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.make_a_lens.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_magic_lens": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arcanelens:magic_lens"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

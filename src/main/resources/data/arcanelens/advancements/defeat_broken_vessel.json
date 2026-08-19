@@ -1,0 +1,28 @@
+{
+  "parent": "arcanelens:defeat_sleeping_god",
+  "display": {
+    "icon": {
+      "item": "arcanelens:warped_catalyst"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.defeat_broken_vessel.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.defeat_broken_vessel.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "killed_broken_vessel": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "arcanelens:broken_vessel"
+        }
+      }
+    }
+  }
+}

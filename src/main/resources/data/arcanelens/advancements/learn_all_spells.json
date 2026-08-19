@@ -1,0 +1,50 @@
+{
+  "parent": "arcanelens:root",
+  "display": {
+    "icon": {
+      "item": "arcanelens:ancient_spell_book"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.learn_all_spells.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.learn_all_spells.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "fireball": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:fireball"
+      }
+    },
+    "heal": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:heal"
+      }
+    },
+    "frost_bolt": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:frost_bolt"
+      }
+    },
+    "blink": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:blink"
+      }
+    },
+    "lightning_strike": {
+      "trigger": "arcanelens:spell_learned",
+      "conditions": {
+        "spell": "arcanelens:lightning_strike"
+      }
+    }
+  }
+}

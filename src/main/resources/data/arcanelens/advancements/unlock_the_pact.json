@@ -1,0 +1,32 @@
+{
+  "parent": "arcanelens:defeat_sleeping_god",
+  "display": {
+    "icon": {
+      "item": "arcanelens:hungers_pact"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.unlock_the_pact.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.unlock_the_pact.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_pact": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arcanelens:hungers_pact"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

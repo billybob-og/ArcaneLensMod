@@ -1,0 +1,18 @@
+{
+    "name": "The Lens Combiner",
+    "category": "arcanelens:combining",
+    "icon": "arcanelens:lens_combiner",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:lens_combiner",
+            "title": "Merging Two Lenses",
+            "text": "Place a bottom lens, a top lens, and enough Raw Arcane Material to pay the price. The bottom lens's entire spell set is folded permanently into the result's locked spells, alongside the top lens's own locked spells. The top lens's configurable slots seed a fresh set of 5 editable slots on the new lens."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Mana & Limits",
+            "text": "The merged lens's maximum mana is the sum of both inputs, starting at three quarters of their combined current mana. Every lens can only be merged this way a total of 5 times across its whole lineage, and the material cost rises steeply with each merge - plan your combines carefully."
+        }
+    ]
+}

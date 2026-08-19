@@ -1,0 +1,18 @@
+{
+    "name": "What The Hunger Actually Offers",
+    "category": "arcanelens:pantheon",
+    "icon": "arcanelens:hunger_faith_altar",
+    "advancement": "arcanelens:pledge_made_hunger",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "More Than Watching",
+            "text": "The apparitions, the blessings and burdens, the tokens pressed into your thoughts - all of that was ever really the Hunger testing you from a distance. Pledge to it directly and that stops. What it gives you instead is smaller, but yours for certain: rotten meat, poison, anything foul you eat no longer touches you at all."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "It Takes Its Share",
+            "text": "It doesn't stop at food. Land two hits on anything and a little of what you dealt comes back to you as healing - never much at once, but it adds up over a fight. Feed its own Faith Altar an item and it'll devour it slowly, a piece at a time, for Faith of its own."
+        }
+    ]
+}

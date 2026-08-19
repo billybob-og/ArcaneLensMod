@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "fuel=0,lit=false": {
+      "model": "arcanelens:block/soul_pedestal"
+    },
+    "fuel=0,lit=true": {
+      "model": "arcanelens:block/soul_pedestal"
+    },
+    "fuel=1,lit=false": {
+      "model": "arcanelens:block/soul_pedestal"
+    },
+    "fuel=1,lit=true": {
+      "model": "arcanelens:block/soul_pedestal"
+    },
+    "fuel=2,lit=false": {
+      "model": "arcanelens:block/soul_pedestal"
+    },
+    "fuel=2,lit=true": {
+      "model": "arcanelens:block/soul_pedestal"
+    },
+    "fuel=3,lit=false": {
+      "model": "arcanelens:block/soul_pedestal"
+    },
+    "fuel=3,lit=true": {
+      "model": "arcanelens:block/soul_pedestal"
+    }
+  }
+}

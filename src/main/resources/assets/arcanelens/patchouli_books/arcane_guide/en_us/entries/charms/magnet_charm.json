@@ -1,0 +1,13 @@
+{
+    "name": "The Magnet Charm",
+    "category": "arcanelens:charms",
+    "icon": "arcanelens:magnet_charm",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:magnet_charm",
+            "title": "A Quiet Pull",
+            "text": "Worn in a charm slot (via Curios) rather than held or armored, it draws nearby dropped items steadily toward you the whole time it's on."
+        }
+    ]
+}

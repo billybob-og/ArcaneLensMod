@@ -1,0 +1,13 @@
+{
+    "name": "Burning Charcoal",
+    "category": "arcanelens:charms",
+    "icon": "arcanelens:burning_charcoal_charm",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:burning_charcoal_charm",
+            "title": "Fire Without Bite",
+            "text": "Worn in a charm slot, it keeps you unbothered by flame and lava for as long as it's on - no potion, no timer to watch."
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+  "parent": "arcanelens:make_a_lens",
+  "display": {
+    "icon": {
+      "item": "arcanelens:diamond_engraver"
+    },
+    "title": {
+      "translate": "advancements.arcanelens.max_a_lens.title"
+    },
+    "description": {
+      "translate": "advancements.arcanelens.max_a_lens.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "slots_filled": {
+      "trigger": "arcanelens:lens_slots_filled",
+      "conditions": {
+        "count": {
+          "min": 5
+        }
+      }
+    }
+  }
+}

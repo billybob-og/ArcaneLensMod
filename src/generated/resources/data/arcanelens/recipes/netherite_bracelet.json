@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "arcanelens:gold_bracelet"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "arcanelens:raw_arcane_material"
+    }
+  ],
+  "result": {
+    "item": "arcanelens:netherite_bracelet"
+  }
+}

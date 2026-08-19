@@ -1,0 +1,13 @@
+{
+    "name": "Wither Rose Charm",
+    "category": "arcanelens:charms",
+    "icon": "arcanelens:preserved_wither_rose_charm",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:preserved_wither_rose_charm",
+            "title": "Wither, Undone",
+            "text": "Worn in a charm slot, the Wither effect never gets a real hold on you - cleared away almost the instant it's inflicted."
+        }
+    ]
+}

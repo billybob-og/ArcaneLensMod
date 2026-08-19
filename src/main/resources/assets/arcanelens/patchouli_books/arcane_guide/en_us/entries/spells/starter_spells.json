@@ -1,0 +1,22 @@
+{
+    "name": "The Five Starter Spells",
+    "category": "arcanelens:spells",
+    "icon": "minecraft:fire_charge",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "Fireball & Frost Bolt",
+            "text": "Fireball hurls a burst of flame that damages and ignites everything caught in its blast. Frost Bolt strikes a single target with a chilling hit that also slows them."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Heal & Blink",
+            "text": "Heal restores your own health instantly. Blink teleports you forward along your line of sight, stopping just short of any wall in the way."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Lightning Strike",
+            "text": "Calls down a bolt of lightning on your target. Inscribing extra copies of this spell adds further bolts, striking near the same point."
+        }
+    ]
+}

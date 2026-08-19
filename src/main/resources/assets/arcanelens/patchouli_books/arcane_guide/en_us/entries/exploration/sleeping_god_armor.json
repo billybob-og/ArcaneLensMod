@@ -1,0 +1,13 @@
+{
+    "name": "Buried God's Relics",
+    "category": "arcanelens:exploration",
+    "icon": "arcanelens:sleeping_god_helmet",
+    "advancement": "arcanelens:defeat_sleeping_god",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "Unlike Any Other",
+            "text": "The sleeping god's armor does not rust, and does not forget who woke it. A full set - helm, plate, greaves, and boots - offers protection to match the ordeal of claiming it."
+        }
+    ]
+}

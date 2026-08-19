@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:wither_rose"
+    },
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "arcanelens:raw_arcane_material"
+    }
+  ],
+  "result": {
+    "item": "arcanelens:preserved_wither_rose_charm"
+  }
+}

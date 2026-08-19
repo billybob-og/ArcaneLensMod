@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "arcanelens:arcane_ink"
+    },
+    {
+      "item": "arcanelens:arcane_ink"
+    },
+    {
+      "item": "arcanelens:arcane_ink"
+    },
+    {
+      "item": "arcanelens:arcane_ink"
+    }
+  ],
+  "result": {
+    "item": "arcanelens:pack_of_the_gods"
+  }
+}

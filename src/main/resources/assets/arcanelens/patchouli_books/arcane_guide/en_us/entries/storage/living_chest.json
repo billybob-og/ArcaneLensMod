@@ -1,0 +1,24 @@
+{
+    "name": "Living Chest",
+    "category": "arcanelens:storage",
+    "icon": "arcanelens:storage_block",
+    "advancement": "arcanelens:storage_system_unlocked",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:storage_block",
+            "title": "A Chest That Grows",
+            "text": "Requires the Storage System skill unlocked in the Skill Tree first - the recipe stays visible even before then, but crafting it early produces nothing. Once unlocked, each Living Chest holds 5 slots on its own."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Merging by Touch",
+            "text": "Push two Living Chests flush against each other on any side and they merge into a single shared pool automatically - no wiring, no linking item. Keep adding chests and the pool keeps growing, up to a cap of 15 chests per cluster. Breaking one just drops that chest's own contents; the rest of the cluster keeps working."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Raising the Cap",
+            "text": "The 15-chest cap can be raised further with Storage Network Expansion, a repeatable Skill Tree upgrade beneath Storage System. Each level costs more Arcane Ink than the last and permanently raises how many Living Chests a network you build can hold."
+        }
+    ]
+}

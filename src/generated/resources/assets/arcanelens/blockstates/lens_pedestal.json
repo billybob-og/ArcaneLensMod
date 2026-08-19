@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "arcanelens:block/lens_pedestal"
+    }
+  }
+}

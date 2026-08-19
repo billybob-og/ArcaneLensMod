@@ -1,0 +1,18 @@
+{
+    "name": "The Iron Bracelet",
+    "category": "arcanelens:charms",
+    "icon": "arcanelens:iron_bracelet",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:iron_bracelet",
+            "title": "Room for One More",
+            "text": "Worn in its own bracelet slot, separate from any charm - while it's on, you have one more charm slot to fill than you did before."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "A Tier Among Tiers",
+            "text": "Iron is only the start. Better bracelets grant more room still, and each is built from the one before it."
+        }
+    ]
+}

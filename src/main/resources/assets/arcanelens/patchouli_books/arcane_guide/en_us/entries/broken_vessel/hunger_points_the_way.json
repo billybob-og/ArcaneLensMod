@@ -1,0 +1,18 @@
+{
+    "name": "A Place, Named",
+    "category": "arcanelens:broken_vessel",
+    "icon": "arcanelens:token_of_the_hunger",
+    "advancement": "arcanelens:hunger_points_the_way",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "It Offered, For Once",
+            "text": "You didn't have to ask. Mid-riddle, without preamble, it simply told you where to look - as if it had been waiting for the eyes-revealed to settle before it bothered."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "Where To Look",
+            "text": "Somewhere in the Warped Hollow, roughly X: 300, Z: -200. It won't be buried like the rest of what's out there - you should see it before you're standing on top of it."
+        }
+    ]
+}

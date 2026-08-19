@@ -1,0 +1,5 @@
+{
+    "name": "Networked Storage",
+    "description": "A scattered cluster of chests, wired into one shared pool through a single console.",
+    "icon": "arcanelens:storage_block"
+}

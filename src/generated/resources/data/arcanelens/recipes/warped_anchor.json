@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:beacon"
+    },
+    {
+      "item": "arcanelens:warped_vessel_shard"
+    },
+    {
+      "item": "arcanelens:warped_vessel_shard"
+    }
+  ],
+  "result": {
+    "item": "arcanelens:warped_anchor"
+  }
+}

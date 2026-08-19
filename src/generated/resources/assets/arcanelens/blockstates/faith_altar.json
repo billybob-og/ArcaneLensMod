@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "rotation=0": {
+      "model": "arcanelens:block/faith_altar"
+    },
+    "rotation=1": {
+      "model": "arcanelens:block/faith_altar",
+      "y": 90
+    },
+    "rotation=2": {
+      "model": "arcanelens:block/faith_altar",
+      "y": 180
+    },
+    "rotation=3": {
+      "model": "arcanelens:block/faith_altar",
+      "y": 270
+    }
+  }
+}

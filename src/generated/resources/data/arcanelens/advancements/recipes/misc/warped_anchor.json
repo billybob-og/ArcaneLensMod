@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arcanelens:warped_anchor"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_warped_vessel_shard": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arcanelens:warped_vessel_shard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_warped_vessel_shard",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arcanelens:warped_anchor"
+    ]
+  },
+  "sends_telemetry_event": false
+}
