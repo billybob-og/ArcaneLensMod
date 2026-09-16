@@ -1,0 +1,9 @@
+{
+    "schema": "1",
+    "id": "arcanelens",
+    "modid": "arcanelens",
+    "platforms": {
+        "modrinth": "arcane-lense"
+    },
+    "owners": ["billybob-og"]
+}
