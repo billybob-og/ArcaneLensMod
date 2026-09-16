@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:soul_sand"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    },
+    {
+      "item": "arcanelens:arcane_ink"
+    }
+  ],
+  "result": {
+    "item": "arcanelens:hunger_faith_altar"
+  }
+}

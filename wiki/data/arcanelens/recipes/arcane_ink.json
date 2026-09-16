@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:nether_star"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "arcanelens:raw_arcane_material"
+    },
+    {
+      "item": "arcanelens:raw_arcane_material"
+    }
+  ],
+  "result": {
+    "item": "arcanelens:arcane_ink"
+  }
+}

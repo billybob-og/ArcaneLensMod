@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "arcanelens:arcane_ink"
+    },
+    {
+      "item": "arcanelens:token_of_the_hunger"
+    },
+    {
+      "item": "minecraft:warped_fungus"
+    }
+  ],
+  "result": {
+    "item": "arcanelens:warped_catalyst"
+  }
+}

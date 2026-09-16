@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "arcanelens:raw_arcane_material"
+    },
+    "C": {
+      "item": "minecraft:crafting_table"
+    },
+    "H": {
+      "item": "minecraft:hopper"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "CIC",
+    "IHI",
+    "CAC"
+  ],
+  "result": {
+    "item": "arcanelens:arcane_assembler"
+  },
+  "show_notification": true
+}
