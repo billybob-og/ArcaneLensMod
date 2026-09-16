@@ -6,6 +6,7 @@ import com.arcanelens.network.packet.ClientboundSyncKnownSpellsPacket;
 import com.arcanelens.network.packet.ClientboundSyncSkillTreePacket;
 import com.arcanelens.network.packet.ServerboundCastSpellPacket;
 import com.arcanelens.network.packet.ServerboundChooseHungerBoonPacket;
+import com.arcanelens.network.packet.ServerboundChallengeGodPacket;
 import com.arcanelens.network.packet.ServerboundChoosePledgePacket;
 import com.arcanelens.network.packet.ServerboundCombineLensesPacket;
 import com.arcanelens.network.packet.ServerboundCycleSpellPacket;
@@ -109,5 +110,10 @@ public class NetworkHandler
                 ServerboundTheaterAbilityPacket::encode,
                 ServerboundTheaterAbilityPacket::decode,
                 ServerboundTheaterAbilityPacket::handle);
+
+        CHANNEL.registerMessage(packetId++, ServerboundChallengeGodPacket.class,
+                ServerboundChallengeGodPacket::encode,
+                ServerboundChallengeGodPacket::decode,
+                ServerboundChallengeGodPacket::handle);
     }
 }

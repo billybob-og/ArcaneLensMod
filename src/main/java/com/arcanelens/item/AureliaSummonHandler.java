@@ -5,7 +5,6 @@ import com.arcanelens.capability.FaithProvider;
 import com.arcanelens.entity.AureliaCompanionEntity;
 import com.arcanelens.god.GodRegistry;
 import com.arcanelens.registry.ModEntityTypes;
-import com.arcanelens.registry.ModItems;
 import com.arcanelens.spell.SummonExpiryHandler;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleTypes;
@@ -15,7 +14,6 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -78,8 +76,6 @@ public class AureliaSummonHandler
         companion.moveTo(serverPlayer.getX(), serverPlayer.getY(), serverPlayer.getZ(), serverPlayer.getYRot(), 0.0F);
         companion.tame(serverPlayer);
         companion.setOrderedToSit(false);
-        companion.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ModItems.SPEAR.get()));
-        companion.setDropChance(EquipmentSlot.MAINHAND, 0.0F);
         companion.getPersistentData().putLong(SummonExpiryHandler.EXPIRY_TAG,
                 level.getGameTime() + computeDurationTicks(serverPlayer));
         level.addFreshEntity(companion);

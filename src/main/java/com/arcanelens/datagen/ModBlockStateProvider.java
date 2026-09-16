@@ -72,6 +72,12 @@ public class ModBlockStateProvider extends BlockStateProvider
                 new ConfiguredModel[] { new ConfiguredModel(faithAltarModel, 0, state.getValue(FaithAltarBlock.ROTATION) * 90, false) });
         simpleBlockItem(ModBlocks.FAITH_ALTAR.get(), faithAltarModel);
 
+        // Placeholder art: vanilla crying obsidian, closest existing texture to a mysterious/arcane
+        // challenge-altar theme (also fits its glow - see GodChallengeAltarBlock's lightLevel).
+        ModelFile godChallengeAltarModel = models().cubeAll("god_challenge_altar", mcLoc("block/crying_obsidian"));
+        simpleBlock(ModBlocks.GOD_CHALLENGE_ALTAR.get(), godChallengeAltarModel);
+        simpleBlockItem(ModBlocks.GOD_CHALLENGE_ALTAR.get(), godChallengeAltarModel);
+
         // Genuinely invisible admin fixtures - no elements at all, so nothing renders in-world or in
         // inventory/hand. See CommandTriggerBlock/TriggerPlateBlock.
         ModelFile commandTriggerModel = models().getBuilder("command_trigger");

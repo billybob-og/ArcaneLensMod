@@ -3,9 +3,11 @@ package com.arcanelens.client;
 import com.arcanelens.ArcaneLens;
 import com.arcanelens.client.gui.FlightHudOverlay;
 import com.arcanelens.client.gui.SpellHudOverlay;
+import com.arcanelens.client.model.AureliaBossModel;
 import com.arcanelens.client.model.AureliaModel;
 import com.arcanelens.client.model.SleepingGodModel;
 import com.arcanelens.client.model.TheHungerModel;
+import com.arcanelens.client.renderer.AureliaBossRenderer;
 import com.arcanelens.client.renderer.AureliaCompanionRenderer;
 import com.arcanelens.client.renderer.BrokenVesselRenderer;
 import com.arcanelens.client.renderer.InvisibleTriggerRenderer;
@@ -17,6 +19,7 @@ import com.arcanelens.client.renderer.TheHungerSkyRenderer;
 import com.arcanelens.client.renderer.TheaterCloneRenderer;
 import com.arcanelens.client.screen.ArcaneAssemblerScreen;
 import com.arcanelens.client.screen.CommandTriggerScreen;
+import com.arcanelens.client.screen.GodChallengeScreen;
 import com.arcanelens.client.screen.GodPledgeScreen;
 import com.arcanelens.client.screen.InscriptionWorkbenchScreen;
 import com.arcanelens.client.screen.LensCombinerScreen;
@@ -58,6 +61,7 @@ public class ClientModEvents
         event.registerLayerDefinition(TheaterCloneRenderer.LAYER_LOCATION,
                 () -> LayerDefinition.create(HumanoidModel.createMesh(CubeDeformation.NONE, 0.0F), 64, 64));
         event.registerLayerDefinition(AureliaModel.LAYER_LOCATION, AureliaModel::createBodyLayer);
+        event.registerLayerDefinition(AureliaBossModel.LAYER_LOCATION, AureliaBossModel::createBodyLayer);
     }
 
     @SubscribeEvent
@@ -72,6 +76,7 @@ public class ClientModEvents
             MenuScreens.register(ModMenuTypes.TERMINAL.get(), TerminalScreen::new);
             MenuScreens.register(ModMenuTypes.ARCANE_ASSEMBLER.get(), ArcaneAssemblerScreen::new);
             MenuScreens.register(ModMenuTypes.GOD_PLEDGE.get(), GodPledgeScreen::new);
+            MenuScreens.register(ModMenuTypes.GOD_CHALLENGE.get(), GodChallengeScreen::new);
             // The author's portal art has a transparent background (a swirl, not a solid tile) - the
             // default opaque/solid render layer would draw transparent pixels as solid black instead.
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.OVERLOAD_PORTAL.get(), RenderType.translucent());
@@ -105,6 +110,7 @@ public class ClientModEvents
         event.registerEntityRenderer(ModEntityTypes.HUNGER_IDOL.get(), TheHungerRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.THEATER_CLONE.get(), TheaterCloneRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.AURELIA_COMPANION.get(), AureliaCompanionRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.AURELIA_BOSS.get(), AureliaBossRenderer::new);
         // Creative-only wireframe markers so these invisible admin fixtures are still findable while
         // building - never rendered in survival/adventure. Different colors so the two are distinguishable.
         event.registerBlockEntityRenderer(ModBlockEntities.COMMAND_TRIGGER.get(),

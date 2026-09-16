@@ -1,10 +1,11 @@
-// 1.20.1	2026-08-17T18:17:28.651172	Block States: arcanelens
+// 1.20.1	2026-08-21T17:05:16.7638137	Block States: arcanelens
 447fd81c75f4bdcc82590b29ef0ff4d82dcb2ed4 assets/arcanelens/blockstates/arcane_assembler.json
 6a4799ddcfdf0c9b57f45930c34a4fd4ff141b13 assets/arcanelens/blockstates/arcane_ore.json
 86de5d8ebe68587d9435d7e23aee43986568663e assets/arcanelens/blockstates/arena_trigger.json
 f2278525305fac7f4dfc128e0cadb7e754f6fd97 assets/arcanelens/blockstates/command_trigger.json
 7623fc14151d0cc8334cfd5fe06ab81e4b749fcd assets/arcanelens/blockstates/faith_altar.json
 8a3b3024c7c23405c908a172f0dd8a1b044c4a1e assets/arcanelens/blockstates/fertility_faith_altar.json
+049c69b3805a4312747e4a05465154d9b5d30a3b assets/arcanelens/blockstates/god_challenge_altar.json
 f66ba35e29fe72ffa4409cf0184a794f8c1fb876 assets/arcanelens/blockstates/hunger_faith_altar.json
 b7684c94e893193fa4904787c2de1c40e930643d assets/arcanelens/blockstates/inscription_workbench.json
 86c24f99d3007a01de23b05a09e560827fc90adc assets/arcanelens/blockstates/lens_combiner.json
@@ -26,6 +27,7 @@ c91a43249246f35207465e0c79da024ff33a854f assets/arcanelens/models/block/arcane_o
 bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f assets/arcanelens/models/block/command_trigger.json
 a525b3b987b963d03ffb76a2070473d4e9c4b471 assets/arcanelens/models/block/faith_altar.json
 3acbff69653e29cb76f4510692fe2effcccf4026 assets/arcanelens/models/block/fertility_faith_altar.json
+11b133eddc991956a234106091db56c31d2ee51c assets/arcanelens/models/block/god_challenge_altar.json
 f702f00c2b85ba520a695af125bbc539e596ddde assets/arcanelens/models/block/inscription_workbench.json
 e3914631b04cee06a661b558790ad316da2a1f0e assets/arcanelens/models/block/lens_combiner.json
 3213998f81652390c51a28fcfb8fafced8ec819e assets/arcanelens/models/block/overload_core.json
@@ -44,6 +46,7 @@ c22adda99f3240090f7ebc522a31626569af6994 assets/arcanelens/models/item/arena_tri
 a033f226f3bfddde2d4f847c6b441f4112190ee3 assets/arcanelens/models/item/command_trigger.json
 1e5a963de80a124f2d88f90dd2f8dd6b77b5c631 assets/arcanelens/models/item/faith_altar.json
 22ad3e69f3148240f55e022cb2e590d31881c527 assets/arcanelens/models/item/fertility_faith_altar.json
+fc31e2226b99f88a02dbb6e0b81f1a52e91cf3af assets/arcanelens/models/item/god_challenge_altar.json
 f2e9648d1936fe54e4217ad29c4bec6526276af1 assets/arcanelens/models/item/hunger_faith_altar.json
 a755e185dd8febb5b320c32e82663f4d70fcada0 assets/arcanelens/models/item/inscription_workbench.json
 ab30c9fa136ead1fff8cbffef6fc0b5ed949e5d0 assets/arcanelens/models/item/lens_combiner.json

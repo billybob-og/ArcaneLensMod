@@ -23,6 +23,7 @@ public class CapabilityHandler
     private static final ResourceLocation FAITH_CAP_ID = new ResourceLocation(ArcaneLens.MODID, "faith");
     private static final ResourceLocation SKILL_TREE_CAP_ID = new ResourceLocation(ArcaneLens.MODID, "skill_tree");
     private static final ResourceLocation POCKET_DIMENSION_STATE_CAP_ID = new ResourceLocation(ArcaneLens.MODID, "pocket_dimension_state");
+    private static final ResourceLocation GOD_HUB_STATE_CAP_ID = new ResourceLocation(ArcaneLens.MODID, "god_hub_state");
     private static final String DEATH_SNAPSHOT_KEY = "arcanelensKnownSpellsSnapshot";
     private static final String FAITH_SNAPSHOT_KEY = "arcanelensFaithSnapshot";
     private static final String SKILL_TREE_SNAPSHOT_KEY = "arcanelensSkillTreeSnapshot";
@@ -33,6 +34,7 @@ public class CapabilityHandler
         event.register(IFaith.class);
         event.register(ISkillTree.class);
         event.register(IPocketDimensionState.class);
+        event.register(IGodHubState.class);
     }
 
     public static void onAttachCapabilities(AttachCapabilitiesEvent<Entity> event)
@@ -43,6 +45,7 @@ public class CapabilityHandler
             event.addCapability(FAITH_CAP_ID, new FaithProvider());
             event.addCapability(SKILL_TREE_CAP_ID, new SkillTreeProvider());
             event.addCapability(POCKET_DIMENSION_STATE_CAP_ID, new PocketDimensionStateProvider());
+            event.addCapability(GOD_HUB_STATE_CAP_ID, new GodHubStateProvider());
         }
     }
 

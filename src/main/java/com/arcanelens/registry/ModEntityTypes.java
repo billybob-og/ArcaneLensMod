@@ -3,6 +3,7 @@ package com.arcanelens.registry;
 import com.arcanelens.ArcaneLens;
 import com.arcanelens.entity.AureliaCompanionEntity;
 import com.arcanelens.entity.BrokenVesselEntity;
+import com.arcanelens.entity.boss.AureliaBossEntity;
 import com.arcanelens.entity.HungerIdolEntity;
 import com.arcanelens.entity.SleepingGodEntity;
 import com.arcanelens.entity.TheHungerEntity;
@@ -71,11 +72,22 @@ public class ModEntityTypes
     // only ever created by mod logic, never naturally spawned or meant to persist across a restart.
     public static final RegistryObject<EntityType<AureliaCompanionEntity>> AURELIA_COMPANION = ENTITY_TYPES.register("aurelia_companion",
             () -> EntityType.Builder.of(AureliaCompanionEntity::new, MobCategory.CREATURE)
-                    .sized(0.6f, 1.95f)
+                    .sized(0.6f, 1.8f) // exact player hitbox (Player.STANDING_DIMENSIONS)
                     .clientTrackingRange(10)
                     .noSave()
                     .noSummon()
                     .build(new ResourceLocation(ArcaneLens.MODID, "aurelia_companion").toString()));
+
+    // Aurelia's God Challenge Hub boss fight (see entity/boss/AureliaBossEntity) - a real persistent
+    // boss like Sleeping God/Broken Vessel (no .noSave()/.noSummon()), only ever spawned by
+    // GodChallengeService, never naturally. Hitbox scaled up from the companion's exact-player-size
+    // proportions to roughly match the boss's larger 0.8x render scale - placeholder, retune once the
+    // real model's actual boss-scale proportions are confirmed.
+    public static final RegistryObject<EntityType<AureliaBossEntity>> AURELIA_BOSS = ENTITY_TYPES.register("aurelia_boss",
+            () -> EntityType.Builder.of(AureliaBossEntity::new, MobCategory.MONSTER)
+                    .sized(1.0f, 2.9f)
+                    .clientTrackingRange(12)
+                    .build(new ResourceLocation(ArcaneLens.MODID, "aurelia_boss").toString()));
 
     @SubscribeEvent
     public static void onEntityAttributeCreation(EntityAttributeCreationEvent event)
@@ -84,5 +96,6 @@ public class ModEntityTypes
         event.put(BROKEN_VESSEL.get(), BrokenVesselEntity.createAttributes().build());
         event.put(THEATER_CLONE.get(), TheaterCloneEntity.createAttributes().build());
         event.put(AURELIA_COMPANION.get(), AureliaCompanionEntity.createAttributes().build());
+        event.put(AURELIA_BOSS.get(), AureliaBossEntity.createAttributes().build());
     }
 }

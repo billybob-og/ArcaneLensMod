@@ -6,6 +6,9 @@ import com.arcanelens.block.OverloadPortalBlock;
 import com.arcanelens.block.StorageNetworkPlacementHandler;
 import com.arcanelens.capability.CapabilityHandler;
 import com.arcanelens.command.ArcaneLensCommand;
+import com.arcanelens.god.GodDropLossHandler;
+import com.arcanelens.god.GodDropVoidRescueHandler;
+import com.arcanelens.god.GodHubProtectionHandler;
 import com.arcanelens.god.PledgeChoiceHandler;
 import com.arcanelens.god.TheaterEventTracker;
 import com.arcanelens.god.WarDeathTracker;
@@ -130,6 +133,9 @@ public class ArcaneLens
         MinecraftForge.EVENT_BUS.addListener(TheaterAbilityHandler::onAttackEntity);
         MinecraftForge.EVENT_BUS.addListener(AureliaSummonHandler::onRightClickItem);
         MinecraftForge.EVENT_BUS.addListener(AureliaSummonHandler::onRightClickBlock);
+        MinecraftForge.EVENT_BUS.addListener(GodHubProtectionHandler::onBlockBreak);
+        MinecraftForge.EVENT_BUS.addListener(GodDropLossHandler::onPlayerDestroyItem);
+        MinecraftForge.EVENT_BUS.addListener(GodDropVoidRescueHandler::onLevelTick);
 
         MinecraftForge.EVENT_BUS.register(this);
 

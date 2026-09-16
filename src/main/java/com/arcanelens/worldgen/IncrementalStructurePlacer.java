@@ -4,12 +4,18 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.DoubleTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.NbtUtils;
 import net.minecraft.nbt.Tag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Clearable;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -17,14 +23,16 @@ import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.BitSetDiscreteVoxelShape;
 import net.minecraftforge.event.TickEvent;
 
+import javax.annotation.Nullable;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
-import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Places a StructureTemplate's blocks a batch at a time across many server ticks instead of all in one tick,
@@ -44,6 +52,17 @@ public class IncrementalStructurePlacer
 
     public static void enqueue(ServerLevel level, StructureTemplate template, BlockPos origin, StructurePlaceSettings settings, RandomSource random)
     {
+        enqueue(level, template, origin, settings, random, null);
+    }
+
+    /** Same as the four-arg enqueue, but runs onComplete once every block in the job has actually been
+     * placed (after the final shape/neighbor-update pass, not merely once the last block is set) - for
+     * callers that need to react to a specific placement finishing, e.g. the Endless Dungeon addon replacing
+     * jigsaw blocks with their final_state once a room is fully down. Safe to call from another subproject:
+     * a plain Runnable, no new public API surface on PlacementJob itself. */
+    public static void enqueue(ServerLevel level, StructureTemplate template, BlockPos origin, StructurePlaceSettings settings,
+                                RandomSource random, @Nullable Runnable onComplete)
+    {
         List<StructureTemplate.StructureBlockInfo> rawBlocks = readRawBlocks(level, template);
         List<StructureTemplate.StructureBlockInfo> positioned = StructureTemplate.processBlockInfos(level, origin, origin, settings, rawBlocks);
 
@@ -54,7 +73,17 @@ public class IncrementalStructurePlacer
             pending.add(new StructureTemplate.StructureBlockInfo(info.pos(), state, info.nbt()));
         }
 
-        ACTIVE_JOBS.add(new PlacementJob(level, pending, random));
+        // Entities (item frames, paintings, armor stands, minecarts, etc.) live in the template's own
+        // separate ENTITIES_TAG, never in BLOCKS_TAG/PALETTE_TAG - readRawBlocks above never touched them, so
+        // without this every entity in every structure this placer has ever placed was silently dropped.
+        // processEntityInfos does the same world-space transform (mirror/rotation/origin) processBlockInfos
+        // does for blocks, just for entity positions - safe to resolve up front like the blocks are, since
+        // nothing about it depends on the incremental placement actually happening yet.
+        List<StructureTemplate.StructureEntityInfo> rawEntities = readRawEntities(template);
+        List<StructureTemplate.StructureEntityInfo> positionedEntities =
+                StructureTemplate.processEntityInfos(template, level, origin, settings, rawEntities);
+
+        ACTIVE_JOBS.add(new PlacementJob(level, pending, positionedEntities, settings, random, onComplete));
     }
 
     public static void onServerTick(TickEvent.ServerTickEvent event)
@@ -64,17 +93,25 @@ public class IncrementalStructurePlacer
             return;
         }
 
-        Iterator<PlacementJob> iterator = ACTIVE_JOBS.iterator();
-        while (iterator.hasNext())
+        // A job's onComplete callback can itself call enqueue() (e.g. a callback that seals a connector with
+        // another structure once this one's done) - that appends to this SAME list while it's still being
+        // processed. Iterating by index up to a count captured before the loop starts (rather than an
+        // Iterator) means a job enqueued mid-loop is simply left for a later tick instead of triggering a
+        // ConcurrentModificationException; finished jobs are removed in one batch after the loop, not during
+        // it, for the same reason.
+        int count = ACTIVE_JOBS.size();
+        List<PlacementJob> finished = new ArrayList<>();
+        for (int i = 0; i < count; i++)
         {
-            PlacementJob job = iterator.next();
+            PlacementJob job = ACTIVE_JOBS.get(i);
             job.placeBatch(BLOCKS_PER_TICK);
             if (job.isDone())
             {
                 job.finish();
-                iterator.remove();
+                finished.add(job);
             }
         }
+        ACTIVE_JOBS.removeAll(finished);
     }
 
     /** Reads the template's raw (untransformed, local-space) block list straight from its own save() output -
@@ -107,18 +144,52 @@ public class IncrementalStructurePlacer
         return result;
     }
 
+    /** Same idea as readRawBlocks, for the template's ENTITIES_TAG - StructureTemplate.entityInfoList itself
+     * is private with no getter, so this re-parses the raw saved NBT directly, matching StructureTemplate's
+     * own load() format exactly (including its behavior of silently skipping any entry with no "nbt" tag). */
+    private static List<StructureTemplate.StructureEntityInfo> readRawEntities(StructureTemplate template)
+    {
+        CompoundTag tag = template.save(new CompoundTag());
+        ListTag entitiesTag = tag.getList(StructureTemplate.ENTITIES_TAG, Tag.TAG_COMPOUND);
+        List<StructureTemplate.StructureEntityInfo> result = new ArrayList<>(entitiesTag.size());
+        for (int i = 0; i < entitiesTag.size(); i++)
+        {
+            CompoundTag entry = entitiesTag.getCompound(i);
+            if (!entry.contains(StructureTemplate.ENTITY_TAG_NBT))
+            {
+                continue;
+            }
+            ListTag posTag = entry.getList(StructureTemplate.ENTITY_TAG_POS, Tag.TAG_DOUBLE);
+            Vec3 pos = new Vec3(posTag.getDouble(0), posTag.getDouble(1), posTag.getDouble(2));
+            ListTag blockPosTag = entry.getList(StructureTemplate.ENTITY_TAG_BLOCKPOS, Tag.TAG_INT);
+            BlockPos blockPos = new BlockPos(blockPosTag.getInt(0), blockPosTag.getInt(1), blockPosTag.getInt(2));
+            CompoundTag nbt = entry.getCompound(StructureTemplate.ENTITY_TAG_NBT);
+            result.add(new StructureTemplate.StructureEntityInfo(pos, blockPos, nbt));
+        }
+        return result;
+    }
+
     private static final class PlacementJob
     {
         private final ServerLevel level;
         private final Deque<StructureTemplate.StructureBlockInfo> pending;
+        private final List<StructureTemplate.StructureEntityInfo> entities;
+        private final StructurePlaceSettings settings;
         private final List<BlockPos> placedPositions = new ArrayList<>();
         private final RandomSource random;
+        @Nullable
+        private final Runnable onComplete;
 
-        PlacementJob(ServerLevel level, Deque<StructureTemplate.StructureBlockInfo> pending, RandomSource random)
+        PlacementJob(ServerLevel level, Deque<StructureTemplate.StructureBlockInfo> pending,
+                     List<StructureTemplate.StructureEntityInfo> entities, StructurePlaceSettings settings,
+                     RandomSource random, @Nullable Runnable onComplete)
         {
             this.level = level;
             this.pending = pending;
+            this.entities = entities;
+            this.settings = settings;
             this.random = random;
+            this.onComplete = onComplete;
         }
 
         void placeBatch(int count)
@@ -175,6 +246,11 @@ public class IncrementalStructurePlacer
         {
             if (placedPositions.isEmpty())
             {
+                spawnEntities();
+                if (onComplete != null)
+                {
+                    onComplete.run();
+                }
                 return;
             }
 
@@ -206,6 +282,55 @@ public class IncrementalStructurePlacer
                     level.setBlock(pos, updated, (Block.UPDATE_CLIENTS & -2) | Block.UPDATE_KNOWN_SHAPE);
                 }
                 level.blockUpdated(pos, updated.getBlock());
+            }
+
+            spawnEntities();
+            if (onComplete != null)
+            {
+                onComplete.run();
+            }
+        }
+
+        /** Reimplements StructureTemplate.addEntitiesToWorld (private, can't be called directly) - `entities`
+         * was already transformed into world-space by processEntityInfos back in enqueue(), so this just
+         * constructs and drops each one in, matching vanilla's own placeInWorld behavior exactly: strip the
+         * template-baked UUID (two placements of the same room must never produce colliding entity UUIDs),
+         * rotate/mirror the entity's own facing to match the room's placement settings, and finalizeSpawn
+         * mobs the same way a freshly-generated structure would if the settings ask for it. */
+        private void spawnEntities()
+        {
+            for (StructureTemplate.StructureEntityInfo info : entities)
+            {
+                CompoundTag nbt = info.nbt.copy();
+                ListTag posTag = new ListTag();
+                posTag.add(DoubleTag.valueOf(info.pos.x));
+                posTag.add(DoubleTag.valueOf(info.pos.y));
+                posTag.add(DoubleTag.valueOf(info.pos.z));
+                nbt.put("Pos", posTag);
+                nbt.remove("UUID");
+
+                Optional<Entity> created;
+                try
+                {
+                    created = EntityType.create(nbt, level);
+                }
+                catch (Exception exception)
+                {
+                    created = Optional.empty();
+                }
+
+                created.ifPresent(entity ->
+                {
+                    float yRot = entity.rotate(settings.getRotation());
+                    yRot += entity.mirror(settings.getMirror()) - entity.getYRot();
+                    entity.moveTo(info.pos.x, info.pos.y, info.pos.z, yRot, entity.getXRot());
+                    if (settings.shouldFinalizeEntities() && entity instanceof Mob mob)
+                    {
+                        mob.finalizeSpawn(level, level.getCurrentDifficultyAt(BlockPos.containing(info.pos)),
+                                MobSpawnType.STRUCTURE, (SpawnGroupData) null, nbt);
+                    }
+                    level.addFreshEntityWithPassengers(entity);
+                });
             }
         }
     }

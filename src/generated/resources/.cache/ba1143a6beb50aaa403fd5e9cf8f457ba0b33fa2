@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-16T18:56:07.5354646	Item Models: arcanelens
+// 1.20.1	2026-08-21T16:47:08.0315223	Item Models: arcanelens
 5eb9254a356375ad1384a2a7d2c14f125b9769ae assets/arcanelens/models/item/ancient_spell_book.json
 439b659d193bf0ab948b57806b914cfb04622d86 assets/arcanelens/models/item/antivenom_charm.json
 ad71304d639b6cf475f5218dca1afea9d9188d3f assets/arcanelens/models/item/arcane_guide.json
@@ -6,6 +6,7 @@ ad71304d639b6cf475f5218dca1afea9d9188d3f assets/arcanelens/models/item/arcane_gu
 e702a13cf5dd738fd4a9229f3f6e3a0fe5979737 assets/arcanelens/models/item/burning_charcoal_charm.json
 92e0ef678d3583c61f6c0005a2fb99f063f5ca29 assets/arcanelens/models/item/diamond_engraver.json
 0dc9a0794e4cd812cafb207d101f18eec8eedd93 assets/arcanelens/models/item/faith_charm.json
+72769b1e6e7135cb777dcdf94930f77c55aa0b5e assets/arcanelens/models/item/god_hub_medallion.json
 5aa076a9a78feeed6582c5659d202ae00ebe710b assets/arcanelens/models/item/gold_bracelet.json
 546cc5410150c82a39010d837728f02e3b9f4ecd assets/arcanelens/models/item/hungers_bindings.json
 ea33b4aefad319ea1fe0247743e99e38118c8c06 assets/arcanelens/models/item/hungers_boon.json

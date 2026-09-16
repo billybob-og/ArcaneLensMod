@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": { "type": "minecraft:uniform", "min": 2, "max": 3 },
+      "entries": [
+        { "type": "minecraft:item", "weight": 8, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:heal\"}" } ] },
+        { "type": "minecraft:item", "weight": 8, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:frost_bolt\"}" } ] },
+        { "type": "minecraft:item", "weight": 8, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:blink\"}" } ] },
+        { "type": "minecraft:item", "weight": 8, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:poison_bolt\"}" } ] },
+        { "type": "minecraft:item", "weight": 8, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:fireball\"}" } ] },
+        { "type": "minecraft:item", "weight": 8, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:invisibility\"}" } ] },
+        { "type": "minecraft:item", "weight": 2, "name": "arcanelens:diamond_engraver" },
+        { "type": "minecraft:item", "weight": 2, "name": "arcanelens:magic_lens" }
+      ]
+    }
+  ]
+}

@@ -11,3 +11,12 @@ pluginManagement {
 plugins {
     id 'org.gradle.toolchains.foojay-resolver-convention' version '0.7.0'
 }
+
+rootProject.name = 'ArcaneLensMod'
+
+// The Endless Dungeon DLC - a separate addon mod (own mod id/jar), built as a same-repo subproject
+// rather than a standalone repo specifically so it can depend on this project's compiled classes
+// (e.g. IncrementalStructurePlacer) directly during active co-development, with no publish/version
+// step needed to pick up a base-mod change - see the plan at
+// C:\Users\alfon\.claude\plans\eager-enchanting-liskov.md.
+include ':endless-dungeon'

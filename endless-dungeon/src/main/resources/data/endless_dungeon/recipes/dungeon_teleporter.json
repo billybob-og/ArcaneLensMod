@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SBS",
+    "SSS"
+  ],
+  "key": {
+    "S": { "item": "endless_dungeon:portal_shard" },
+    "B": { "item": "minecraft:stone_bricks" }
+  },
+  "result": {
+    "item": "endless_dungeon:dungeon_teleporter",
+    "count": 1
+  }
+}

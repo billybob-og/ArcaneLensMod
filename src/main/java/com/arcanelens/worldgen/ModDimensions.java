@@ -17,4 +17,7 @@ public class ModDimensions
 
     public static final ResourceKey<Level> BROKEN_VESSEL_KEY =
             ResourceKey.create(Registries.DIMENSION, new ResourceLocation(ArcaneLens.MODID, "broken_vessel"));
+
+    public static final ResourceKey<Level> GOD_CHALLENGE_HUB_KEY =
+            ResourceKey.create(Registries.DIMENSION, new ResourceLocation(ArcaneLens.MODID, "god_challenge_hub"));
 }

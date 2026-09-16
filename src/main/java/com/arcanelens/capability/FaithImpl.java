@@ -2,8 +2,14 @@ package com.arcanelens.capability;
 
 import net.minecraft.nbt.CompoundTag;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class FaithImpl implements IFaith
 {
+    private final Map<String, Integer> godDropsGranted = new HashMap<>();
+    private final Map<String, Integer> godDropsBroken = new HashMap<>();
+
     private int faith;
     private int sleepingGodDefeats;
     private int brokenVesselDefeats;
@@ -237,6 +243,30 @@ public class FaithImpl implements IFaith
         pledgeProgress = Math.max(0, amount);
     }
 
+    @Override
+    public int getGodDropsGranted(String godId)
+    {
+        return godDropsGranted.getOrDefault(godId, 0);
+    }
+
+    @Override
+    public void incrementGodDropsGranted(String godId)
+    {
+        godDropsGranted.merge(godId, 1, Integer::sum);
+    }
+
+    @Override
+    public int getGodDropsBroken(String godId)
+    {
+        return godDropsBroken.getOrDefault(godId, 0);
+    }
+
+    @Override
+    public void incrementGodDropsBroken(String godId)
+    {
+        godDropsBroken.merge(godId, 1, Integer::sum);
+    }
+
     public CompoundTag serializeNBT()
     {
         CompoundTag tag = new CompoundTag();
@@ -254,6 +284,12 @@ public class FaithImpl implements IFaith
         tag.putBoolean("HasBeenToldRelicLocation", hasBeenToldRelicLocation);
         tag.putString("PledgedGod", pledgedGod);
         tag.putInt("PledgeProgress", pledgeProgress);
+        CompoundTag grantedTag = new CompoundTag();
+        godDropsGranted.forEach(grantedTag::putInt);
+        tag.put("GodDropsGranted", grantedTag);
+        CompoundTag brokenTag = new CompoundTag();
+        godDropsBroken.forEach(brokenTag::putInt);
+        tag.put("GodDropsBroken", brokenTag);
         return tag;
     }
 
@@ -273,5 +309,17 @@ public class FaithImpl implements IFaith
         hasBeenToldRelicLocation = tag.getBoolean("HasBeenToldRelicLocation");
         pledgedGod = tag.getString("PledgedGod");
         pledgeProgress = tag.getInt("PledgeProgress");
+        godDropsGranted.clear();
+        CompoundTag grantedTag = tag.getCompound("GodDropsGranted");
+        for (String godId : grantedTag.getAllKeys())
+        {
+            godDropsGranted.put(godId, grantedTag.getInt(godId));
+        }
+        godDropsBroken.clear();
+        CompoundTag brokenTag = tag.getCompound("GodDropsBroken");
+        for (String godId : brokenTag.getAllKeys())
+        {
+            godDropsBroken.put(godId, brokenTag.getInt(godId));
+        }
     }
 }

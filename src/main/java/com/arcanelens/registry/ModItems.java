@@ -9,6 +9,7 @@ import com.arcanelens.item.BurningCharcoalCharmItem;
 import com.arcanelens.item.DiamondEngraverItem;
 import com.arcanelens.item.FaithCharmItem;
 import com.arcanelens.item.FireResistantArmorItem;
+import com.arcanelens.item.GodHubMedallionItem;
 import com.arcanelens.item.HungersPactItem;
 import com.arcanelens.item.MagicLensItem;
 import com.arcanelens.item.MagnetCharmItem;
@@ -27,6 +28,8 @@ import com.arcanelens.item.WeirdAmuletItem;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tiers;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -92,6 +95,16 @@ public class ModItems
     // hand-placed only inside the Sleeping God Relic Shrine build.
     public static final RegistryObject<Item> SLEEPING_GOD_RELIC_ALTAR = ITEMS.register("sleeping_god_relic_altar",
             () -> new BlockItem(ModBlocks.SLEEPING_GOD_RELIC_ALTAR.get(), new Item.Properties()));
+
+    // Same "obtainable via /give only for now, not in the creative tab" precedent as ARENA_TRIGGER -
+    // how this should actually be obtained in survival is a Phase B decision (see the God Boss Hub plan).
+    public static final RegistryObject<Item> GOD_HUB_MEDALLION = ITEMS.register("god_hub_medallion",
+            () -> new GodHubMedallionItem(new Item.Properties().stacksTo(1)));
+
+    // Same "obtainable via /give only for now, not in the creative tab" precedent as ARENA_TRIGGER -
+    // one placed per god's arena entrance, godId configured per-instance (see GodChallengeAltarBlockEntity).
+    public static final RegistryObject<Item> GOD_CHALLENGE_ALTAR = ITEMS.register("god_challenge_altar",
+            () -> new BlockItem(ModBlocks.GOD_CHALLENGE_ALTAR.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> FAITH_ALTAR = ITEMS.register("faith_altar",
             () -> new BlockItem(ModBlocks.FAITH_ALTAR.get(), new Item.Properties()));
@@ -278,10 +291,13 @@ public class ModItems
     public static final RegistryObject<Item> PACK_OF_THE_GODS = ITEMS.register("pack_of_the_gods",
             () -> new PackOfTheGodsItem(new Item.Properties()));
 
-    // Aurelia's held weapon (see AureliaCompanionEntity/AureliaSummonHandler) - equipped into her
-    // MAINHAND slot at spawn, rendered via ItemInHandLayer rather than fused into her body model.
-    // Plain Item for now (no combat stats/recipe) since the only current need is her holding it -
-    // easy to upgrade to a real weapon class later if it should also be player-craftable/wieldable.
+    // Was Aurelia's companion-held prop (no combat stats, just a rendered visual) before that got
+    // removed per her model's own request - now repurposed as her actual God Challenge Hub boss drop
+    // (see AbstractGodBossEntity's death-drop logic), so it's upgraded to a real weapon. Slightly
+    // stronger than a diamond sword (modifier 4 vs. diamond's 3, same swing speed) to read as a
+    // boss-tier reward. fireResistant() per the god-drop loss-prevention design - see GodDropLossHandler
+    // and GodDropVoidRescueHandler, which together with this cover fire/lava/void; only durability
+    // breaking is left as a real loss path, tracked via the granted/broken counters on IFaith.
     public static final RegistryObject<Item> SPEAR = ITEMS.register("spear",
-            () -> new Item(new Item.Properties()));
+            () -> new SwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties().fireResistant()));
 }

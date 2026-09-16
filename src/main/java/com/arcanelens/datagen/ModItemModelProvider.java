@@ -20,6 +20,7 @@ public class ModItemModelProvider extends ItemModelProvider
         basicItem(ModItems.RAW_ARCANE_MATERIAL.get());
         basicItem(ModItems.DIAMOND_ENGRAVER.get());
         basicItem(ModItems.WEIRD_AMULET.get());
+        basicItem(ModItems.GOD_HUB_MEDALLION.get());
         basicItem(ModItems.TOKEN_OF_THE_HUNGER.get());
         basicItem(ModItems.HUNGERS_BOON.get());
         basicItem(ModItems.HUNGERS_BINDINGS.get());

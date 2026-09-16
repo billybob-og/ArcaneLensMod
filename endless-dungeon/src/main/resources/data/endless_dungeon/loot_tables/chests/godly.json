@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "minecraft:item", "name": "arcanelens:arcane_ink",
+          "functions": [ { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 3 } } ] }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "minecraft:item", "weight": 1, "name": "arcanelens:magnet_charm" },
+        { "type": "minecraft:item", "weight": 1, "name": "arcanelens:faith_charm" },
+        { "type": "minecraft:item", "weight": 1, "name": "arcanelens:mana_orb_charm" },
+        { "type": "minecraft:item", "weight": 1, "name": "arcanelens:burning_charcoal_charm" },
+        { "type": "minecraft:item", "weight": 1, "name": "arcanelens:antivenom_charm" },
+        { "type": "minecraft:item", "weight": 1, "name": "arcanelens:preserved_wither_rose_charm" },
+        { "type": "minecraft:empty", "weight": 10 }
+      ]
+    },
+    {
+      "rolls": { "type": "minecraft:uniform", "min": 1, "max": 2 },
+      "entries": [
+        { "type": "minecraft:item", "weight": 1, "name": "minecraft:warped_fungus",
+          "functions": [ { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 4 } } ] },
+        { "type": "minecraft:item", "weight": 1, "name": "minecraft:warped_nylium",
+          "functions": [ { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1, "max": 4 } } ] }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "minecraft:item", "name": "endless_dungeon:portal_shard",
+          "functions": [ { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 5 } } ] }
+      ]
+    }
+  ]
+}

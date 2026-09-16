@@ -3,6 +3,7 @@ package com.arcanelens.registry;
 import com.arcanelens.ArcaneLens;
 import com.arcanelens.menu.ArcaneAssemblerMenu;
 import com.arcanelens.menu.CommandTriggerMenu;
+import com.arcanelens.menu.GodChallengeMenu;
 import com.arcanelens.menu.GodPledgeMenu;
 import com.arcanelens.menu.InscriptionWorkbenchMenu;
 import com.arcanelens.menu.LensCombinerMenu;
@@ -50,4 +51,8 @@ public class ModMenuTypes
     public static final RegistryObject<MenuType<GodPledgeMenu>> GOD_PLEDGE = MENUS.register(
             "god_pledge",
             () -> IForgeMenuType.create(GodPledgeMenu::new));
+
+    public static final RegistryObject<MenuType<GodChallengeMenu>> GOD_CHALLENGE = MENUS.register(
+            "god_challenge",
+            () -> IForgeMenuType.create(GodChallengeMenu::new));
 }

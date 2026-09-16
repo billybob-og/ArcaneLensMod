@@ -1,0 +1,123 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = mod_id
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+// minecraft_version/forge_version/mapping_channel/mapping_version/loader_version_range/
+// forge_version_range/minecraft_version_range all come from the root project's gradle.properties -
+// Gradle exposes root project properties to every subproject automatically, so this file only
+// overrides the addon-specific mod_id/mod_name/mod_version/etc. (see this project's own gradle.properties).
+minecraft {
+    mappings channel: mapping_channel, version: mapping_version
+    copyIdeResources = true
+
+    runs {
+        configureEach {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
+            // Patchouli ships Mixins with a refmap keyed to SRG names; these two properties tell Mixin
+            // to remap that refmap to our official mappings at runtime, or its accessor mixins fail to
+            // find their target fields (e.g. "AccessorScreen" FAILED during APPLY) - same fix as root
+            // build.gradle, needed again here since each subproject's runs config is independent.
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+
+            // Both mods need to be present for the addon's mandatory dependency on arcanelens (see
+            // mods.toml) to resolve at all - without this the addon's own dev client would immediately
+            // fail its own dependency check on launch.
+            mods {
+                "${mod_id}" {
+                    source sourceSets.main
+                }
+                "arcanelens" {
+                    source project(':').sourceSets.main
+                }
+            }
+        }
+
+        client {
+            property 'forge.enabledGameTestNamespaces', mod_id
+        }
+
+        server {
+            property 'forge.enabledGameTestNamespaces', mod_id
+            args '--nogui'
+        }
+
+        data {
+            workingDirectory project.file('run-data')
+            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+        }
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+repositories {
+    // Forge maven and Maven Central are added automatically by ForgeGradle.
+    // Needed directly here too: fg.deobf() dependencies pulled in transitively from the root
+    // project's project(':') dependency don't resolve across the project boundary otherwise.
+    maven { url 'https://maven.blamejared.com' }
+    maven { url 'https://maven.theillusivec4.top/' }
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+    // Direct project dependency on the base mod - this is the whole point of the same-repo
+    // subproject choice (see the plan): no publish/version step needed to pick up a base-mod change.
+    implementation project(':')
+
+    // fg.deobf() dependency substitution is per-project - pulling arcanelens in above doesn't run
+    // its deobfuscation for these here, so they need declaring directly too (mirrors root build.gradle).
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}:api")
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api")
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
+}
+
+tasks.named('processResources', ProcessResources).configure {
+    var replaceProperties = [
+            minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range,
+            forge_version: forge_version, forge_version_range: forge_version_range,
+            loader_version_range: loader_version_range,
+            mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
+            mod_authors: mod_authors, mod_description: mod_description,
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
+        expand replaceProperties + [project: project]
+    }
+}
+
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+                'Specification-Title'     : mod_id,
+                'Specification-Vendor'    : mod_authors,
+                'Specification-Version'   : '1',
+                'Implementation-Title'    : project.name,
+                'Implementation-Version'  : project.jar.archiveVersion,
+                'Implementation-Vendor'   : mod_authors,
+                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+    finalizedBy 'reobfJar'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

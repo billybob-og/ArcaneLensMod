@@ -314,6 +314,10 @@ public class Config
             .comment("Faith granted the first time a player interacts with the Sleeping God Relic Shrine's altar in the Warped Hollow")
             .defineInRange("sleepingGodRelicFaithReward", 40, 1, Integer.MAX_VALUE);
 
+    private static final ForgeConfigSpec.IntValue GOD_BOSS_REPEAT_KILL_FAITH_REWARD = BUILDER
+            .comment("Faith granted for defeating a God Challenge Hub boss while the player already holds a live copy of that god's unique drop")
+            .defineInRange("godBossRepeatKillFaithReward", 20, 1, Integer.MAX_VALUE);
+
     private static final ForgeConfigSpec.IntValue HUNGER_ALTAR_CONSUME_INTERVAL_TICKS = BUILDER
             .comment("Ticks between each item the Hunger's Faith Altar devours from its single slot")
             .defineInRange("hungerAltarConsumeIntervalTicks", 100, 1, 72000);
@@ -590,6 +594,7 @@ public class Config
     public static double overloadRitualCapFractionAfterVesselDefeat = 0.75;
     public static int maxWarpedAnchorsPerPlayer = 1;
     public static int sleepingGodRelicFaithReward = 40;
+    public static int godBossRepeatKillFaithReward = 20;
     public static int hungerAltarConsumeIntervalTicks = 100;
     public static double neutralHungerFoodImmunityChance = 0.1;
     public static int hungerLifestealHitsPerHeal = 2;
@@ -717,6 +722,7 @@ public class Config
         overloadRitualCapFractionAfterVesselDefeat = OVERLOAD_RITUAL_CAP_FRACTION_AFTER_VESSEL_DEFEAT.get();
         maxWarpedAnchorsPerPlayer = MAX_WARPED_ANCHORS_PER_PLAYER.get();
         sleepingGodRelicFaithReward = SLEEPING_GOD_RELIC_FAITH_REWARD.get();
+        godBossRepeatKillFaithReward = GOD_BOSS_REPEAT_KILL_FAITH_REWARD.get();
         hungerAltarConsumeIntervalTicks = HUNGER_ALTAR_CONSUME_INTERVAL_TICKS.get();
         neutralHungerFoodImmunityChance = NEUTRAL_HUNGER_FOOD_IMMUNITY_CHANCE.get();
         hungerLifestealHitsPerHeal = HUNGER_LIFESTEAL_HITS_PER_HEAL.get();

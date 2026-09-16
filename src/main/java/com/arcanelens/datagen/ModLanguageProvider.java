@@ -28,9 +28,11 @@ public class ModLanguageProvider extends LanguageProvider
         add("block.arcanelens.soul_feeder", "Soul Feeder");
         add("block.arcanelens.arena_trigger", "Arena Trigger");
         add("block.arcanelens.faith_altar", "Faith Altar");
+        add("block.arcanelens.god_challenge_altar", "God Challenge Altar");
         add("block.arcanelens.command_trigger", "Command Trigger");
         add("block.arcanelens.trigger_plate", "Trigger Plate");
         add("item.arcanelens.weird_amulet", "Weird Amulet");
+        add("item.arcanelens.god_hub_medallion", "God Hub Medallion");
         add("entity.arcanelens.the_hunger", "The Hunger");
         add("item.arcanelens.token_of_the_hunger", "Token of the Hunger");
         add("item.arcanelens.hungers_boon", "The Hunger's Boon");
@@ -108,7 +110,7 @@ public class ModLanguageProvider extends LanguageProvider
         add("block.arcanelens.theater_faith_altar", "Janus's Faith Altar");
         add("item.arcanelens.theater_helmet", "Mask of Janus");
         add("item.arcanelens.pack_of_the_gods", "A Godly Contract");
-        add("item.arcanelens.spear", "Spear");
+        add("item.arcanelens.spear", "Aurelia's Spear");
         add("entity.arcanelens.aurelia_companion", "Aurelia");
         add("advancements.arcanelens.unlock_the_pact.title", "A Bargain Struck");
         add("advancements.arcanelens.unlock_the_pact.description", "Obtain The Hunger's Pact from the Hunger Idol");

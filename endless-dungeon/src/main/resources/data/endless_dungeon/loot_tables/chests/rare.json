@@ -1,0 +1,63 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": { "type": "minecraft:uniform", "min": 1, "max": 2 },
+      "entries": [
+        { "type": "minecraft:item", "weight": 6, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:lightning_strike\"}" } ] },
+        { "type": "minecraft:item", "weight": 6, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:chain_lightning\"}" } ] },
+        { "type": "minecraft:item", "weight": 6, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:meteor_shower\"}" } ] },
+        { "type": "minecraft:item", "weight": 6, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:life_drain\"}" } ] },
+        { "type": "minecraft:item", "weight": 6, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:arcane_shield\"}" } ] },
+        { "type": "minecraft:item", "weight": 6, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:haste_surge\"}" } ] },
+        { "type": "minecraft:item", "weight": 6, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:gravity_pull\"}" } ] },
+        { "type": "minecraft:item", "weight": 6, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:shockwave\"}" } ] },
+        { "type": "minecraft:item", "weight": 6, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:arrow_volley\"}" } ] },
+        { "type": "minecraft:item", "weight": 6, "name": "arcanelens:ancient_spell_book",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{SpellId:\"arcanelens:summon_ally\"}" } ] }
+      ]
+    },
+    {
+      "rolls": { "type": "minecraft:uniform", "min": 0, "max": 1 },
+      "entries": [
+        { "type": "minecraft:item", "weight": 3, "name": "arcanelens:magic_lens",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{Spells:[\"arcanelens:fireball\",\"arcanelens:frost_bolt\"]}" } ] },
+        { "type": "minecraft:item", "weight": 3, "name": "arcanelens:magic_lens",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{Spells:[\"arcanelens:lightning_strike\",\"arcanelens:blink\"]}" } ] },
+        { "type": "minecraft:item", "weight": 3, "name": "arcanelens:magic_lens",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{Spells:[\"arcanelens:heal\",\"arcanelens:arcane_shield\"]}" } ] },
+        { "type": "minecraft:item", "weight": 3, "name": "arcanelens:magic_lens",
+          "functions": [ { "function": "minecraft:set_nbt", "tag": "{Spells:[\"arcanelens:poison_bolt\",\"arcanelens:shockwave\"]}" } ] },
+        { "type": "minecraft:empty", "weight": 8 }
+      ]
+    },
+    {
+      "rolls": { "type": "minecraft:uniform", "min": 1, "max": 2 },
+      "entries": [
+        { "type": "minecraft:item", "name": "minecraft:soul_sand",
+          "functions": [ { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 2, "max": 4 } } ] }
+      ]
+    },
+    {
+      "rolls": { "type": "minecraft:uniform", "min": 0, "max": 1 },
+      "entries": [
+        { "type": "minecraft:item", "weight": 5, "name": "minecraft:enchanted_book",
+          "functions": [ { "function": "minecraft:enchant_randomly", "enchantments": [
+              "minecraft:sharpness", "minecraft:protection", "minecraft:unbreaking", "minecraft:efficiency",
+              "minecraft:fortune", "minecraft:looting", "minecraft:power", "minecraft:mending",
+              "minecraft:silk_touch", "minecraft:respiration", "minecraft:feather_falling", "minecraft:knockback"
+          ] } ] },
+        { "type": "minecraft:empty", "weight": 3 }
+      ]
+    }
+  ]
+}

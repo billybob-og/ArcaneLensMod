@@ -1,10 +1,14 @@
 package com.arcanelens.entity;
 
 import com.arcanelens.Config;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
@@ -31,9 +35,34 @@ import org.jetbrains.annotations.Nullable;
  * SummonAllySpell's wolves already use), not tracked on this class at all. */
 public class AureliaCompanionEntity extends TamableAnimal
 {
+    /** The tickCount value at her last successful attack, synced to the client so AureliaModel can
+     * derive a swing animation from "ticks since this happened" - NOT LivingEntity's own swing()/
+     * getAttackAnim(), which turned out not to reliably drive an AI-melee mob's attack animation
+     * (Mob#doHurtTarget doesn't call swing() itself, and even after adding an explicit swing() call it
+     * still didn't visibly animate). Same idea as SleepingGodEntity's own DATA_ACTION_END_TICK - a
+     * synced "when does this animation end" tick the model derives progress from - though Sleeping
+     * God's is a real custom swing animation while Broken Vessel currently has no attack animation at
+     * all, so this isn't literally reusing either one's code, just the same known-working shape of
+     * mechanism. Defaults far in the past so "ticks since attack" starts safely out of animation range
+     * at spawn. */
+    private static final EntityDataAccessor<Integer> DATA_ATTACK_START_TICK =
+            SynchedEntityData.defineId(AureliaCompanionEntity.class, EntityDataSerializers.INT);
+
     public AureliaCompanionEntity(EntityType<? extends TamableAnimal> type, Level level)
     {
         super(type, level);
+    }
+
+    @Override
+    protected void defineSynchedData()
+    {
+        super.defineSynchedData();
+        this.entityData.define(DATA_ATTACK_START_TICK, -1000);
+    }
+
+    public int getAttackStartTick()
+    {
+        return this.entityData.get(DATA_ATTACK_START_TICK);
     }
 
     public static AttributeSupplier.Builder createAttributes()
@@ -62,6 +91,16 @@ public class AureliaCompanionEntity extends TamableAnimal
     public boolean removeWhenFarAway(double distanceToClosestPlayer)
     {
         return false;
+    }
+
+    /** Records when she attacks so AureliaModel can animate the swing from it (see
+     * DATA_ATTACK_START_TICK's own javadoc for why this doesn't just use LivingEntity#swing()). */
+    @Override
+    public boolean doHurtTarget(Entity target)
+    {
+        boolean result = super.doHurtTarget(target);
+        this.entityData.set(DATA_ATTACK_START_TICK, this.tickCount);
+        return result;
     }
 
     @Nullable

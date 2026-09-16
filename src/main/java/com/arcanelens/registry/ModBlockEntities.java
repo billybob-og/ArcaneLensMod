@@ -7,6 +7,7 @@ import com.arcanelens.block.entity.ArenaTriggerBlockEntity;
 import com.arcanelens.block.entity.CommandTriggerBlockEntity;
 import com.arcanelens.block.entity.FaithAltarBlockEntity;
 import com.arcanelens.block.entity.FertilityFaithAltarBlockEntity;
+import com.arcanelens.block.entity.GodChallengeAltarBlockEntity;
 import com.arcanelens.block.entity.HungerFaithAltarBlockEntity;
 import com.arcanelens.block.entity.InscriptionWorkbenchBlockEntity;
 import com.arcanelens.block.entity.LensCombinerBlockEntity;
@@ -56,6 +57,10 @@ public class ModBlockEntities
     public static final RegistryObject<BlockEntityType<FaithAltarBlockEntity>> FAITH_ALTAR = BLOCK_ENTITIES.register(
             "faith_altar",
             () -> BlockEntityType.Builder.of(FaithAltarBlockEntity::new, ModBlocks.FAITH_ALTAR.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<GodChallengeAltarBlockEntity>> GOD_CHALLENGE_ALTAR = BLOCK_ENTITIES.register(
+            "god_challenge_altar",
+            () -> BlockEntityType.Builder.of(GodChallengeAltarBlockEntity::new, ModBlocks.GOD_CHALLENGE_ALTAR.get()).build(null));
 
     public static final RegistryObject<BlockEntityType<CommandTriggerBlockEntity>> COMMAND_TRIGGER = BLOCK_ENTITIES.register(
             "command_trigger",

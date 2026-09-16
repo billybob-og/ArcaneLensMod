@@ -7,6 +7,7 @@ import com.arcanelens.block.ArenaTriggerBlock;
 import com.arcanelens.block.CommandTriggerBlock;
 import com.arcanelens.block.FaithAltarBlock;
 import com.arcanelens.block.FertilityFaithAltarBlock;
+import com.arcanelens.block.GodChallengeAltarBlock;
 import com.arcanelens.block.HungerFaithAltarBlock;
 import com.arcanelens.block.InscriptionWorkbenchBlock;
 import com.arcanelens.block.LensCombinerBlock;
@@ -61,6 +62,11 @@ public class ModBlocks
 
     public static final RegistryObject<Block> FAITH_ALTAR = BLOCKS.register("faith_altar",
             () -> new FaithAltarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE).strength(3.5f).lightLevel(state -> 6)));
+
+    // One placed at each god's arena entrance in the God Challenge Hub - not meant to be crafted
+    // normally (obtainable via /give only for now, see ModItems), its godId is baked in per-instance.
+    public static final RegistryObject<Block> GOD_CHALLENGE_ALTAR = BLOCKS.register("god_challenge_altar",
+            () -> new GodChallengeAltarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).strength(4.0f).lightLevel(state -> 8)));
 
     // Invisible admin fixtures, not meant to be crafted/found normally - obtainable via /give only, matching
     // vanilla's own Command Block being hidden from the creative inventory. See CommandTriggerBlock/
