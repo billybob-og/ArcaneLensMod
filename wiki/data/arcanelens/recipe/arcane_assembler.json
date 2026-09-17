@@ -21,7 +21,7 @@
     "CAC"
   ],
   "result": {
-    "item": "arcanelens:arcane_assembler"
+    "id": "arcanelens:arcane_assembler"
   },
   "show_notification": true
 }
