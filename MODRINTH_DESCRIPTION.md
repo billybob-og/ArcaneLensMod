@@ -133,9 +133,25 @@ Advancements
 - **Florian (Fertility)** — bonus max hearts that scale with your devotion, plus passive regeneration near nature once fully pledged
 - **Aurelia (War)** — permanently scaling Strength, plus a Totem-of-Undying-style extra life once fully devoted
 - **Quetzera (Sun)** — daytime buffs (Night Vision, Glowing, Haste, Speed, scaling Armor) that flip into nighttime debuffs after dark
-- **Janus (Theater)** — a Theater Helmet grants three Faith-fueled active abilities (Stage Clone, Crowd Control, Vanishing Act), plus passive fall-damage immunity, dodge chance, and reduced aggro
+- **Janus (Theater)** — a Theater Helmet grants three Faith-fueled active abilities (Stage Clone, Crowd Control, Vanishing Act), plus passive fall-damage immunity, dodge chance, and reduced aggro. Stage Clone's decoy wears your skin and armor, and leaves nothing behind when it falls
 - Six new advancements track making your pledge and committing to each of the five gods
-- A new Pantheon chapter in the Arcane Guide covers the full pledge system and every god's perks
+
+### The Trials
+
+- Craft a **God Hub Medallion** (a Warped Vessel Shard ringed by gold) to open a door to the God Challenge Hub — a dark, flat dimension ringed with one arena per god. Right-click it again inside to return to exactly where you left
+- Use a Challenge Altar to be taken into that god's arena and face their champion. Fall, and the fight ends; win, and you're carried back to the hub
+- **Aurelia** fights with a wound-up spear thrust and a straight-line charge, growing faster and deadlier across three stages. Beat her for **Aurelia's Spear** — a blade stronger than diamond with extra reach
+- **Florian** takes the shape of a great stag that gores and tosses you skyward, or charges head-down. Beat him for **Florian's Antler** — right-click it to call a lesser Florian to fight beside you for a short while
+- Every victory after your first pays out Faith instead, and a god's relic is fire-proof and can't be lost to the void
+- More gods' trials are still to come
+
+### Winged Chestplate
+
+- Smith a Vessel-Bound Chestplate with an Elytra and a Warped Attunement Template to make the **Vessel-Bound Winged Chestplate** — it keeps the set's recovering flight and adds a real glide on top
+
+### Guide
+
+- A new Pantheon chapter in the Arcane Guide covers the full pledge system, every god's perks, and the Trials
 
 </details>
 
