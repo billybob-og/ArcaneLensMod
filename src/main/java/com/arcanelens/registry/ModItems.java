@@ -3,12 +3,14 @@ package com.arcanelens.registry;
 import com.arcanelens.ArcaneLens;
 import com.arcanelens.item.AncientSpellBookItem;
 import com.arcanelens.item.AntivenomCharmItem;
+import com.arcanelens.item.AureliasSpearItem;
 import com.arcanelens.item.ArcaneGuideBookItem;
 import com.arcanelens.item.BraceletItem;
 import com.arcanelens.item.BurningCharcoalCharmItem;
 import com.arcanelens.item.DiamondEngraverItem;
 import com.arcanelens.item.FaithCharmItem;
 import com.arcanelens.item.FireResistantArmorItem;
+import com.arcanelens.item.FloriansAntlerItem;
 import com.arcanelens.item.GodHubMedallionItem;
 import com.arcanelens.item.HungersPactItem;
 import com.arcanelens.item.MagicLensItem;
@@ -22,6 +24,7 @@ import com.arcanelens.item.TheaterArmorMaterial;
 import com.arcanelens.item.TheHungersBoonItem;
 import com.arcanelens.item.TokenOfTheHungerItem;
 import com.arcanelens.item.VesselBoundArmorItem;
+import com.arcanelens.item.VesselBoundElytraItem;
 import com.arcanelens.item.VesselSummoningCharmItem;
 import com.arcanelens.item.WarpedAnchorItem;
 import com.arcanelens.item.WeirdAmuletItem;
@@ -241,6 +244,11 @@ public class ModItems
     public static final RegistryObject<Item> VESSEL_BOUND_SLEEPING_GOD_CHESTPLATE = ITEMS.register("vessel_bound_sleeping_god_chestplate",
             () -> new VesselBoundArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
+    // The Vessel-Bound chestplate with an Elytra smithed in (Attunement Template + Vessel-Bound Chestplate +
+    // Elytra). Counts as the set's chestplate everywhere (see VesselBoundFlightHandler) and can glide.
+    public static final RegistryObject<Item> VESSEL_BOUND_ELYTRA_CHESTPLATE = ITEMS.register("vessel_bound_elytra_chestplate",
+            () -> new VesselBoundElytraItem(new Item.Properties()));
+
     public static final RegistryObject<Item> VESSEL_BOUND_SLEEPING_GOD_LEGGINGS = ITEMS.register("vessel_bound_sleeping_god_leggings",
             () -> new VesselBoundArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
@@ -298,6 +306,13 @@ public class ModItems
     // boss-tier reward. fireResistant() per the god-drop loss-prevention design - see GodDropLossHandler
     // and GodDropVoidRescueHandler, which together with this cover fire/lava/void; only durability
     // breaking is left as a real loss path, tracked via the granted/broken counters on IFaith.
+    // Boosted past that first pass (modifier 6, +2 entity reach - see AureliasSpearItem) since the fight it
+    // rewards is a hard one.
     public static final RegistryObject<Item> SPEAR = ITEMS.register("spear",
-            () -> new SwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties().fireResistant()));
+            () -> new AureliasSpearItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties().fireResistant()));
+
+    // Florian's God Challenge Hub boss drop - right-click summons a debuffed Florian for a short while (see
+    // FloriansAntlerItem). fireResistant() for the same god-drop loss-prevention reasons as the Spear.
+    public static final RegistryObject<Item> FLORIANS_ANTLER = ITEMS.register("florians_antler",
+            () -> new FloriansAntlerItem(new Item.Properties().stacksTo(1).fireResistant()));
 }

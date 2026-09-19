@@ -4,7 +4,7 @@ import com.arcanelens.capability.FaithProvider;
 import com.arcanelens.registry.ModBlocks;
 import com.arcanelens.registry.ModEntityTypes;
 import com.arcanelens.registry.ModItems;
-import net.minecraft.core.BlockPos;
+import com.arcanelens.worldgen.GodArenaPlacer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
@@ -17,13 +17,6 @@ public class GodRegistry
 {
     public static final String NEUTRAL_ID = "neutral";
 
-    // Aurelia's arena isn't built yet (see the God Boss Hub plan) - this origin just picks a patch of
-    // the hub's flat concrete floor away from its fixed spawn point (0.5, 9, 0.5), so the full
-    // challenge -> teleport -> boss -> drop flow is testable end to end before any real arena structure
-    // exists. arenaStructureId points at a .nbt that doesn't exist either - harmless, since nothing
-    // reads it until GodArenaPlacer is built (Phase A's arena-placement piece, still pending).
-    private static final BlockPos AURELIA_ARENA_ORIGIN = new BlockPos(30, 9, 0);
-
     // Internal ids ("hunger"/"fertility"/"war"/"sun"/"theater") are deliberately NOT renamed to match
     // these proper names - they're persisted in player NBT (IFaith.pledgedGod) and compared against
     // throughout the codebase, so only the display Component changes here.
@@ -33,11 +26,12 @@ public class GodRegistry
                     null, null, null, null),
             new GodDefinition("fertility", Component.literal("Florian"), null, true, () -> ModBlocks.FERTILITY_FAITH_ALTAR,
                     Component.literal("What grows wild answers to him."),
-                    null, null, null, null),
+                    () -> ModEntityTypes.FLORIAN_BOSS, new ResourceLocation("arcanelens", "god_arena_fertility"),
+                    GodArenaPlacer.FERTILITY_ARENA_SPAWN, () -> ModItems.FLORIANS_ANTLER),
             new GodDefinition("war", Component.literal("Aurelia"), null, true, () -> ModBlocks.WAR_FAITH_ALTAR,
                     Component.literal("She remembers every fall, and rewards the ones still standing."),
                     () -> ModEntityTypes.AURELIA_BOSS, new ResourceLocation("arcanelens", "god_arena_war"),
-                    AURELIA_ARENA_ORIGIN, () -> ModItems.SPEAR),
+                    GodArenaPlacer.WAR_ARENA_SPAWN, () -> ModItems.SPEAR),
             new GodDefinition("sun", Component.literal("Quetzera"), null, true, () -> ModBlocks.SUN_FAITH_ALTAR,
                     Component.literal("Thrives in daylight, and grows sluggish once it's gone."),
                     null, null, null, null),

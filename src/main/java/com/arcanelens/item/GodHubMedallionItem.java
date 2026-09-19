@@ -1,6 +1,7 @@
 package com.arcanelens.item;
 
 import com.arcanelens.capability.GodHubStateProvider;
+import com.arcanelens.god.GodChallengeService;
 import com.arcanelens.worldgen.ModDimensions;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
@@ -35,9 +36,9 @@ import java.util.Set;
  */
 public class GodHubMedallionItem extends Item
 {
-    private static final double HUB_SPAWN_X = 0.5;
-    private static final double HUB_SPAWN_Y = 9.0;
-    private static final double HUB_SPAWN_Z = 0.5;
+    private static final double HUB_SPAWN_X = GodChallengeService.HUB_SPAWN.x;
+    private static final double HUB_SPAWN_Y = GodChallengeService.HUB_SPAWN.y;
+    private static final double HUB_SPAWN_Z = GodChallengeService.HUB_SPAWN.z;
 
     public GodHubMedallionItem(Properties properties)
     {

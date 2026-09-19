@@ -3,8 +3,11 @@ package com.arcanelens.entity.boss;
 import com.arcanelens.Config;
 import com.arcanelens.capability.FaithProvider;
 import com.arcanelens.capability.FaithSync;
+import com.arcanelens.god.GodChallengeService;
 import com.arcanelens.god.GodDefinition;
 import com.arcanelens.god.GodRegistry;
+import com.arcanelens.worldgen.ModDimensions;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -107,6 +110,13 @@ public abstract class AbstractGodBossEntity extends Monster
     {
         super.die(damageSource);
         bossEvent.removeAllPlayers();
+        // The arenas are sealed, so without this a winner is stuck in there unless they can fly. Done BEFORE
+        // the drop is granted: a full inventory makes grantDropOrFaith drop the item at the player's feet,
+        // which would strand it inside the arena if they were still standing there.
+        if (this.level() instanceof ServerLevel serverLevel && serverLevel.dimension() == ModDimensions.GOD_CHALLENGE_HUB_KEY)
+        {
+            GodChallengeService.returnPlayersToHub(serverLevel, this.position());
+        }
         if (damageSource.getEntity() instanceof ServerPlayer player)
         {
             grantDropOrFaith(player);

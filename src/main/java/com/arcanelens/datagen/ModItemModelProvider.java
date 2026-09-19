@@ -54,6 +54,7 @@ public class ModItemModelProvider extends ItemModelProvider
         basicItem(ModItems.WARPED_ATTUNEMENT_TEMPLATE.get());
         basicItem(ModItems.VESSEL_BOUND_SLEEPING_GOD_HELMET.get());
         basicItem(ModItems.VESSEL_BOUND_SLEEPING_GOD_CHESTPLATE.get());
+        basicItem(ModItems.VESSEL_BOUND_ELYTRA_CHESTPLATE.get());
         basicItem(ModItems.VESSEL_BOUND_SLEEPING_GOD_LEGGINGS.get());
         basicItem(ModItems.VESSEL_BOUND_SLEEPING_GOD_BOOTS.get());
         basicItem(ModItems.WARPED_ANCHOR.get());

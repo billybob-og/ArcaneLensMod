@@ -24,6 +24,12 @@
             "text": "A full Vessel-Bound set keeps the original's flight, but the budget recovers slowly on its own while grounded instead of locking out after a hard cooldown. Wearing the complete set also shrugs off Poison and Wither outright - what consumed the vessel doesn't get a grip on you."
         },
         {
+            "type": "patchouli:smithing",
+            "recipe": "arcanelens:vessel_bound_elytra_chestplate",
+            "title": "Wings Worked In",
+            "text": "A Vessel-Bound chestplate, an Elytra and another Attunement Template make a winged chestplate. It keeps everything the set gives you - the recovering flight budget included - and adds a glide on top. Gliding wears it down like an ordinary Elytra, and it won't glide once it's one hit from breaking."
+        },
+        {
             "type": "patchouli:crafting",
             "recipe": "arcanelens:warped_anchor",
             "title": "The Warped Anchor",

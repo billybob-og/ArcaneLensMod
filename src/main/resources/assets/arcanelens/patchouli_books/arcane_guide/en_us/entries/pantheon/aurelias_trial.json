@@ -1,0 +1,19 @@
+{
+    "name": "Aurelia's Trial",
+    "category": "arcanelens:pantheon",
+    "icon": "arcanelens:spear",
+    "advancement": "arcanelens:pledge_made",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "The Spear and the Charge",
+            "text": "Aurelia fights with a long spear: a wound-up thrust when you're close, and a headlong charge when you back away. She grows faster and hits harder as she's worn down, across three stages - so don't spend your openings early."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "arcanelens:spear",
+            "title": "Aurelia's Spear",
+            "text": "Her relic, kept by whoever beats her: a blade a little stronger than diamond, with two extra blocks of reach - a spear in all but name. It can't burn, and the void won't keep it."
+        }
+    ]
+}

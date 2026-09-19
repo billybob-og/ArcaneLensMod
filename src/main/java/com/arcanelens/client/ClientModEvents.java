@@ -5,17 +5,21 @@ import com.arcanelens.client.gui.FlightHudOverlay;
 import com.arcanelens.client.gui.SpellHudOverlay;
 import com.arcanelens.client.model.AureliaBossModel;
 import com.arcanelens.client.model.AureliaModel;
+import com.arcanelens.client.model.FlorianBossModel;
 import com.arcanelens.client.model.SleepingGodModel;
 import com.arcanelens.client.model.TheHungerModel;
 import com.arcanelens.client.renderer.AureliaBossRenderer;
 import com.arcanelens.client.renderer.AureliaCompanionRenderer;
 import com.arcanelens.client.renderer.BrokenVesselRenderer;
+import com.arcanelens.client.renderer.FlorianBossRenderer;
+import com.arcanelens.client.renderer.FlorianCompanionRenderer;
 import com.arcanelens.client.renderer.InvisibleTriggerRenderer;
 import com.arcanelens.client.renderer.LensPedestalRenderer;
 import com.arcanelens.client.renderer.SleepingGodRenderer;
 import com.arcanelens.client.renderer.SoulPedestalRenderer;
 import com.arcanelens.client.renderer.TheHungerRenderer;
 import com.arcanelens.client.renderer.TheHungerSkyRenderer;
+import com.arcanelens.client.renderer.VesselBoundElytraLayer;
 import com.arcanelens.client.renderer.TheaterCloneRenderer;
 import com.arcanelens.client.screen.ArcaneAssemblerScreen;
 import com.arcanelens.client.screen.CommandTriggerScreen;
@@ -36,6 +40,7 @@ import net.minecraft.client.model.geom.builders.CubeDeformation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.player.PlayerRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
@@ -57,11 +62,9 @@ public class ClientModEvents
         // "2x resolution" texture needs no UV remapping to use it.
         event.registerLayerDefinition(BrokenVesselRenderer.LAYER_LOCATION,
                 () -> LayerDefinition.create(HumanoidModel.createMesh(CubeDeformation.NONE, 0.0F), 64, 64));
-        // Same stock-humanoid-mesh trick, see TheaterCloneRenderer's javadoc.
-        event.registerLayerDefinition(TheaterCloneRenderer.LAYER_LOCATION,
-                () -> LayerDefinition.create(HumanoidModel.createMesh(CubeDeformation.NONE, 0.0F), 64, 64));
         event.registerLayerDefinition(AureliaModel.LAYER_LOCATION, AureliaModel::createBodyLayer);
         event.registerLayerDefinition(AureliaBossModel.LAYER_LOCATION, AureliaBossModel::createBodyLayer);
+        event.registerLayerDefinition(FlorianBossModel.LAYER_LOCATION, FlorianBossModel::createBodyLayer);
     }
 
     @SubscribeEvent
@@ -100,6 +103,18 @@ public class ClientModEvents
     }
 
     @SubscribeEvent
+    public static void addLayers(EntityRenderersEvent.AddLayers event)
+    {
+        for (String skin : event.getSkins())
+        {
+            if (event.getSkin(skin) instanceof PlayerRenderer renderer)
+            {
+                renderer.addLayer(new VesselBoundElytraLayer<>(renderer, event.getEntityModels()));
+            }
+        }
+    }
+
+    @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event)
     {
         event.registerBlockEntityRenderer(ModBlockEntities.SOUL_PEDESTAL.get(), SoulPedestalRenderer::new);
@@ -111,6 +126,8 @@ public class ClientModEvents
         event.registerEntityRenderer(ModEntityTypes.THEATER_CLONE.get(), TheaterCloneRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.AURELIA_COMPANION.get(), AureliaCompanionRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.AURELIA_BOSS.get(), AureliaBossRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.FLORIAN_BOSS.get(), FlorianBossRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.FLORIAN_COMPANION.get(), FlorianCompanionRenderer::new);
         // Creative-only wireframe markers so these invisible admin fixtures are still findable while
         // building - never rendered in survival/adventure. Different colors so the two are distinguishable.
         event.registerBlockEntityRenderer(ModBlockEntities.COMMAND_TRIGGER.get(),

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arcanelens:god_hub_medallion"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_warped_vessel_shard": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arcanelens:warped_vessel_shard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_warped_vessel_shard",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arcanelens:god_hub_medallion"
+    ]
+  },
+  "sends_telemetry_event": false
+}

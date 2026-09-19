@@ -112,6 +112,10 @@ public class ModLanguageProvider extends LanguageProvider
         add("item.arcanelens.pack_of_the_gods", "A Godly Contract");
         add("item.arcanelens.spear", "Aurelia's Spear");
         add("entity.arcanelens.aurelia_companion", "Aurelia");
+        add("entity.arcanelens.aurelia_boss", "Aurelia");
+        add("item.arcanelens.florians_antler", "Florian's Antler");
+        add("entity.arcanelens.florian_boss", "Florian");
+        add("entity.arcanelens.florian_companion", "Florian");
         add("advancements.arcanelens.unlock_the_pact.title", "A Bargain Struck");
         add("advancements.arcanelens.unlock_the_pact.description", "Obtain The Hunger's Pact from the Hunger Idol");
         add("advancements.arcanelens.step_beyond.title", "Step Beyond");
@@ -138,6 +142,7 @@ public class ModLanguageProvider extends LanguageProvider
         add("item.arcanelens.warped_attunement_template", "Warped Attunement Template");
         add("item.arcanelens.vessel_bound_sleeping_god_helmet", "Vessel-Bound Helm of the Minor God");
         add("item.arcanelens.vessel_bound_sleeping_god_chestplate", "Vessel-Bound Chestplate of the Minor God");
+        add("item.arcanelens.vessel_bound_elytra_chestplate", "Vessel-Bound Winged Chestplate of the Minor God");
         add("item.arcanelens.vessel_bound_sleeping_god_leggings", "Vessel-Bound Leggings of the Minor God");
         add("item.arcanelens.vessel_bound_sleeping_god_boots", "Vessel-Bound Boots of the Minor God");
         add("item.arcanelens.warped_anchor", "Warped Anchor");

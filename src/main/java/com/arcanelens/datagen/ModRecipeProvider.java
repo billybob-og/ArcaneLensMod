@@ -256,6 +256,16 @@ public class ModRecipeProvider extends RecipeProvider
                 .unlockedBy("has_token_of_the_hunger", has(ModItems.TOKEN_OF_THE_HUNGER.get()))
                 .save(writer);
 
+        // A Warped Vessel Shard ringed by gold - gated by needing at least one Broken Vessel kill.
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GOD_HUB_MEDALLION.get())
+                .pattern("GGG")
+                .pattern("GSG")
+                .pattern("GGG")
+                .define('G', Items.GOLD_INGOT)
+                .define('S', ModItems.WARPED_VESSEL_SHARD.get())
+                .unlockedBy("has_warped_vessel_shard", has(ModItems.WARPED_VESSEL_SHARD.get()))
+                .save(writer);
+
         // Duplication, not creation - same "spend a Shard to copy a Template" shape as vanilla's own
         // smithing-template duplication recipes, just a plain shapeless recipe since this codebase has no
         // reason to reuse vanilla's special per-template duplication recipe class for a single mod item.

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "S": {
+      "item": "arcanelens:warped_vessel_shard"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GSG",
+    "GGG"
+  ],
+  "result": {
+    "item": "arcanelens:god_hub_medallion"
+  },
+  "show_notification": true
+}

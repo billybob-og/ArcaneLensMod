@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-21T16:47:08.0315223	Item Models: arcanelens
+// 1.20.1	2026-09-19T14:42:19.7071283	Item Models: arcanelens
 5eb9254a356375ad1384a2a7d2c14f125b9769ae assets/arcanelens/models/item/ancient_spell_book.json
 439b659d193bf0ab948b57806b914cfb04622d86 assets/arcanelens/models/item/antivenom_charm.json
 ad71304d639b6cf475f5218dca1afea9d9188d3f assets/arcanelens/models/item/arcane_guide.json
@@ -28,6 +28,7 @@ baacffecc26f84e64017a34f306ba58f606c55aa assets/arcanelens/models/item/raw_arcan
 a7c4cea94d840f8b4b30529b8320822fc024666c assets/arcanelens/models/item/sun_and_moon_ward.json
 069098b72c13ed1fa9b23694a71eeea4c7085567 assets/arcanelens/models/item/theater_helmet.json
 d003dba45d4c29adb3d42acfc7ec1e1fe7a8c7fd assets/arcanelens/models/item/token_of_the_hunger.json
+f0eae5ac5d2febed5b7c0e1e02e98fadf13b2879 assets/arcanelens/models/item/vessel_bound_elytra_chestplate.json
 9ae315e3918c7d46cb1e559b873af2b47532c429 assets/arcanelens/models/item/vessel_bound_sleeping_god_boots.json
 cd64781e12659871025c357fd3da6298faf7c09c assets/arcanelens/models/item/vessel_bound_sleeping_god_chestplate.json
 ff819b4c793f62053cc4a703a019184a1ef8602c assets/arcanelens/models/item/vessel_bound_sleeping_god_helmet.json

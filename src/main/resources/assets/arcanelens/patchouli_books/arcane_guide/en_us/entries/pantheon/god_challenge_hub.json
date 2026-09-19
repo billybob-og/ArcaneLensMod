@@ -1,0 +1,29 @@
+{
+    "name": "The Trials",
+    "category": "arcanelens:pantheon",
+    "icon": "arcanelens:god_hub_medallion",
+    "advancement": "arcanelens:pledge_made",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "A Place Apart",
+            "text": "A God Hub Medallion opens a door to a dark, flat place set aside for the gods' trials. Right-click it to step through, and right-click it again from inside to return to exactly where you left."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "arcanelens:god_hub_medallion",
+            "title": "Shard in Gold",
+            "text": "A Warped Vessel Shard ringed by gold. You'll need at least one victory over Broken Vessel before you can make one."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "One Door Per God",
+            "text": "Arenas ring the hub, one for each god that has answered, each sealed until you answer its Challenge Altar. Use one and you're taken into that god's arena, with their champion waiting a few paces away. So far only Aurelia and Florian have answered - the rest are still silent."
+        },
+        {
+            "type": "patchouli:text",
+            "title": "How It Ends",
+            "text": "Fall in the arena and the fight is over: the champion fades and you respawn as you would anywhere else. Win, and you are carried back to the hub's center. Your first victory over a god hands you their relic; every victory after that pays out Faith instead - unless the relic has been broken, in which case the next win replaces it."
+        }
+    ]
+}

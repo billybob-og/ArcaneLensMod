@@ -14,7 +14,7 @@ import java.util.EnumSet;
  * exact reasoning as Sleeping God's melee+ranged goals. */
 public class AureliaSpearThrustGoal extends Goal
 {
-    private static final double REACH = 5.0;
+    private static final double REACH = 4.0;
     public static final int WINDUP_TICKS = 8;
 
     private final AureliaBossEntity mob;

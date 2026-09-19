@@ -4,6 +4,8 @@ import com.arcanelens.ArcaneLens;
 import com.arcanelens.entity.AureliaCompanionEntity;
 import com.arcanelens.entity.BrokenVesselEntity;
 import com.arcanelens.entity.boss.AureliaBossEntity;
+import com.arcanelens.entity.boss.FlorianBossEntity;
+import com.arcanelens.entity.FlorianCompanionEntity;
 import com.arcanelens.entity.HungerIdolEntity;
 import com.arcanelens.entity.SleepingGodEntity;
 import com.arcanelens.entity.TheHungerEntity;
@@ -89,9 +91,29 @@ public class ModEntityTypes
                     .clientTrackingRange(12)
                     .build(new ResourceLocation(ArcaneLens.MODID, "aurelia_boss").toString()));
 
+    // Florian's God Challenge Hub boss fight (see entity/boss/FlorianBossEntity) - persistent boss like
+    // Aurelia's, only spawned by GodChallengeService. Hitbox roughly matches the stag's body/head height.
+    public static final RegistryObject<EntityType<FlorianBossEntity>> FLORIAN_BOSS = ENTITY_TYPES.register("florian_boss",
+            () -> EntityType.Builder.of(FlorianBossEntity::new, MobCategory.MONSTER)
+                    .sized(1.4f, 2.4f)
+                    .clientTrackingRange(12)
+                    .build(new ResourceLocation(ArcaneLens.MODID, "florian_boss").toString()));
+
+    // The temporary summon from Florian's Antler - same lifecycle as AURELIA_COMPANION (never saved or
+    // naturally spawned), a smaller hitbox to match its 0.7x render scale.
+    public static final RegistryObject<EntityType<FlorianCompanionEntity>> FLORIAN_COMPANION = ENTITY_TYPES.register("florian_companion",
+            () -> EntityType.Builder.of(FlorianCompanionEntity::new, MobCategory.CREATURE)
+                    .sized(1.0f, 1.7f)
+                    .clientTrackingRange(10)
+                    .noSave()
+                    .noSummon()
+                    .build(new ResourceLocation(ArcaneLens.MODID, "florian_companion").toString()));
+
     @SubscribeEvent
     public static void onEntityAttributeCreation(EntityAttributeCreationEvent event)
     {
+        event.put(FLORIAN_BOSS.get(), FlorianBossEntity.createAttributes().build());
+        event.put(FLORIAN_COMPANION.get(), FlorianCompanionEntity.createAttributes().build());
         event.put(SLEEPING_GOD.get(), SleepingGodEntity.createAttributes().build());
         event.put(BROKEN_VESSEL.get(), BrokenVesselEntity.createAttributes().build());
         event.put(THEATER_CLONE.get(), TheaterCloneEntity.createAttributes().build());

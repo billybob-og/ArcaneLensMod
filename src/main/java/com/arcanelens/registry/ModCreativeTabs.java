@@ -70,6 +70,7 @@ public class ModCreativeTabs
                         output.accept(ModItems.WARPED_ATTUNEMENT_TEMPLATE.get());
                         output.accept(ModItems.VESSEL_BOUND_SLEEPING_GOD_HELMET.get());
                         output.accept(ModItems.VESSEL_BOUND_SLEEPING_GOD_CHESTPLATE.get());
+                        output.accept(ModItems.VESSEL_BOUND_ELYTRA_CHESTPLATE.get());
                         output.accept(ModItems.VESSEL_BOUND_SLEEPING_GOD_LEGGINGS.get());
                         output.accept(ModItems.VESSEL_BOUND_SLEEPING_GOD_BOOTS.get());
                         output.accept(ModItems.WARPED_ANCHOR.get());

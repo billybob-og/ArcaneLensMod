@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-16T18:56:07.5500159	Recipes
+// 1.20.1	2026-09-19T15:00:26.6805606	Recipes
 0de87f3776060496697766527615971dad88011f data/arcanelens/advancements/recipes/misc/antivenom_charm.json
 c64c77385aa5eefb82815412d9d402a595c01577 data/arcanelens/advancements/recipes/misc/arcane_assembler.json
 4e0d803d5fa477aaad2d1d998320bca6b7a1d7ed data/arcanelens/advancements/recipes/misc/arcane_guide.json
@@ -7,6 +7,7 @@ c64c77385aa5eefb82815412d9d402a595c01577 data/arcanelens/advancements/recipes/mi
 449febc5aff9b3bbdcc01d9a0f69eeed8e061e03 data/arcanelens/advancements/recipes/misc/diamond_engraver.json
 a43d3e9911b0edf8c90f8acb6d0ad76027ef51fc data/arcanelens/advancements/recipes/misc/faith_charm.json
 3a6340f93ce32fac97e551e278078da0327424a0 data/arcanelens/advancements/recipes/misc/fertility_faith_altar.json
+a1d5ede30380b6233f6e1ee1b5d8e1f8d19fa4e6 data/arcanelens/advancements/recipes/misc/god_hub_medallion.json
 e9fba184378b1549877970048944204465cc9c08 data/arcanelens/advancements/recipes/misc/gold_bracelet.json
 294a945fa7344892ef3747f664804cb564bdc9e9 data/arcanelens/advancements/recipes/misc/hunger_faith_altar.json
 8e4d138f61e7409c3ba7c160d848f0d1bb6161c1 data/arcanelens/advancements/recipes/misc/inscription_workbench.json
@@ -45,6 +46,7 @@ c91bbf66edb6857a45766e854fa97cce76876a67 data/arcanelens/recipes/burning_charcoa
 9bce34ab89fbe92f39e65338deb34fc69fff4b6a data/arcanelens/recipes/diamond_engraver.json
 bc55f9f18f5bdc963903ef51b6bdad808fc188da data/arcanelens/recipes/faith_charm.json
 9177bb350d63ae9642ae5324d89e075cd04f8953 data/arcanelens/recipes/fertility_faith_altar.json
+fa79ba1d13d17becb882299d8d69c8da20af2ea0 data/arcanelens/recipes/god_hub_medallion.json
 05b97db9d53f53f864346025a536906795f3aa6d data/arcanelens/recipes/gold_bracelet.json
 b690b825c815f1770d66671580059a26e03813ac data/arcanelens/recipes/hunger_faith_altar.json
 bfc0b4c905f5043edc9204e71326e84fea6c19f1 data/arcanelens/recipes/inscription_workbench.json

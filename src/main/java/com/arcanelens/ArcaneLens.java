@@ -6,6 +6,7 @@ import com.arcanelens.block.OverloadPortalBlock;
 import com.arcanelens.block.StorageNetworkPlacementHandler;
 import com.arcanelens.capability.CapabilityHandler;
 import com.arcanelens.command.ArcaneLensCommand;
+import com.arcanelens.god.GodBossResetHandler;
 import com.arcanelens.god.GodDropLossHandler;
 import com.arcanelens.god.GodDropVoidRescueHandler;
 import com.arcanelens.god.GodHubProtectionHandler;
@@ -45,6 +46,7 @@ import com.arcanelens.worldgen.BrokenVesselSpawnHandler;
 import com.arcanelens.worldgen.IncrementalStructurePlacer;
 import com.arcanelens.worldgen.PocketDimensionSpawnHandler;
 import com.arcanelens.worldgen.RelicShrinePlacer;
+import com.arcanelens.worldgen.GodArenaPlacer;
 import com.arcanelens.worldgen.VesselLairPlacer;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.entity.Entity;
@@ -106,6 +108,8 @@ public class ArcaneLens
         MinecraftForge.EVENT_BUS.addListener(OverloadRitualUnlockHandler::onItemCrafted);
         MinecraftForge.EVENT_BUS.addListener(VesselLairPlacer::onPlayerChangedDimension);
         MinecraftForge.EVENT_BUS.addListener(VesselLairPlacer::onPlayerLoggedIn);
+        MinecraftForge.EVENT_BUS.addListener(GodArenaPlacer::onPlayerChangedDimension);
+        MinecraftForge.EVENT_BUS.addListener(GodArenaPlacer::onPlayerLoggedIn);
         MinecraftForge.EVENT_BUS.addListener(RelicShrinePlacer::onPlayerChangedDimension);
         MinecraftForge.EVENT_BUS.addListener(RelicShrinePlacer::onPlayerLoggedIn);
         MinecraftForge.EVENT_BUS.addListener(OverloadPortalBlock::onPlayerTick);
@@ -134,6 +138,7 @@ public class ArcaneLens
         MinecraftForge.EVENT_BUS.addListener(AureliaSummonHandler::onRightClickItem);
         MinecraftForge.EVENT_BUS.addListener(AureliaSummonHandler::onRightClickBlock);
         MinecraftForge.EVENT_BUS.addListener(GodHubProtectionHandler::onBlockBreak);
+        MinecraftForge.EVENT_BUS.addListener(GodBossResetHandler::onLivingDeath);
         MinecraftForge.EVENT_BUS.addListener(GodDropLossHandler::onPlayerDestroyItem);
         MinecraftForge.EVENT_BUS.addListener(GodDropVoidRescueHandler::onLevelTick);
 

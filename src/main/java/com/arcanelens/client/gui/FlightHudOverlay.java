@@ -172,7 +172,8 @@ public class FlightHudOverlay implements IGuiOverlay
     private boolean hasVesselBoundFullSet(Player player)
     {
         return player.getItemBySlot(EquipmentSlot.HEAD).is(ModItems.VESSEL_BOUND_SLEEPING_GOD_HELMET.get())
-                && player.getItemBySlot(EquipmentSlot.CHEST).is(ModItems.VESSEL_BOUND_SLEEPING_GOD_CHESTPLATE.get())
+                && (player.getItemBySlot(EquipmentSlot.CHEST).is(ModItems.VESSEL_BOUND_SLEEPING_GOD_CHESTPLATE.get())
+                || player.getItemBySlot(EquipmentSlot.CHEST).is(ModItems.VESSEL_BOUND_ELYTRA_CHESTPLATE.get()))
                 && player.getItemBySlot(EquipmentSlot.LEGS).is(ModItems.VESSEL_BOUND_SLEEPING_GOD_LEGGINGS.get())
                 && player.getItemBySlot(EquipmentSlot.FEET).is(ModItems.VESSEL_BOUND_SLEEPING_GOD_BOOTS.get());
     }

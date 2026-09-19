@@ -126,6 +126,7 @@ public class TheaterAbilityHandler
             return;
         }
         clone.moveTo(player.getX(), player.getY(), player.getZ(), player.getYRot(), 0.0F);
+        clone.copyAppearanceFrom(player);
         level.addFreshEntity(clone);
 
         AABB retargetRange = player.getBoundingBox().inflate(Config.theaterStageCloneRetargetRadius);

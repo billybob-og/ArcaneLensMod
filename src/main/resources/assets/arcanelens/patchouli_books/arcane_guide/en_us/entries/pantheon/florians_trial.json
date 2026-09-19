@@ -1,0 +1,19 @@
+{
+    "name": "Florian's Trial",
+    "category": "arcanelens:pantheon",
+    "icon": "arcanelens:florians_antler",
+    "advancement": "arcanelens:pledge_made",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "The Stag",
+            "text": "Florian takes the shape of a great stag. Up close he lowers his antlers and heaves you into the air; from a distance he puts his head down and charges in a straight line you can sidestep. Like Aurelia, he grows faster and hits harder across three stages."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "arcanelens:florians_antler",
+            "title": "Florian's Antler",
+            "text": "His relic doesn't wear out. Right-click it to call a lesser Florian to fight beside you for about a minute, using the same moves with far less strength. It needs around five minutes to recover before it will answer again."
+        }
+    ]
+}
